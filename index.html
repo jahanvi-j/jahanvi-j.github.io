@@ -1,89 +1,156 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Jahanvi Jeswani | Machine Learning Engineer</title>
+		<title>Jahanvi Jeswani | AI/ML Engineer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Minimalist Overrides for an All-Black/Deep Slate Look */
-			body, #wrapper, section { background-color: #0a0a0a !important; color: #e0e0e0 !important; }
-			h1, h2, h3, h4 { color: #ffffff !important; letter-spacing: 1px; }
-			.inner { max-width: 900px !important; margin: 0 auto !important; }
-			section { border: none !important; box-shadow: none !important; }
-			.project-item, .exp-item { margin-bottom: 4em; border-left: 1px solid #333; padding-left: 2em; }
-			a { color: #888 !important; text-decoration: none; transition: 0.3s; }
-			a:hover { color: #fff !important; }
+			/* Professional Black Aesthetic Overrides */
+			body, #wrapper, section { background-color: #000000 !important; color: #d1d1d1 !important; }
+			h1, h2, h3 { color: #ffffff !important; letter-spacing: 2px; text-transform: uppercase; }
+			p, li { line-height: 1.8; font-size: 1.05em; }
+			
+			/* Navigation Bar Styling */
+			#nav-bar {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				background: rgba(0, 0, 0, 0.9);
+				z-index: 10000;
+				border-bottom: 1px solid #222;
+				text-align: center;
+				padding: 15px 0;
+			}
+			#nav-bar a {
+				color: #888;
+				text-decoration: none;
+				margin: 0 20px;
+				font-size: 0.9em;
+				letter-spacing: 1px;
+				transition: 0.3s;
+			}
+			#nav-bar a:hover { color: #fff; }
+
+			/* Layout Adjustments */
+			.inner { max-width: 1000px !important; margin: 0 auto !important; padding: 4em 2em; }
+			.exp-item, .project-item { 
+				margin-bottom: 5em; 
+				border-left: 1px solid #333; 
+				padding-left: 2.5em; 
+				transition: border-color 0.3s;
+			}
+			.exp-item:hover { border-left-color: #ffffff; }
+			
+			/* Icon Styling */
+			.top-links .icon { font-size: 1.5em; margin: 0 15px; color: #fff !important; }
+			.contact-footer .icon { margin-right: 10px; }
+			hr { border: 0; border-top: 1px solid #222; margin: 3em 0; }
 		</style>
 	</head>
 	<body class="is-preload">
 
+		<nav id="nav-bar">
+			<a href="#intro">Overview</a>
+			<a href="#experience">Experience</a>
+			<a href="#projects">Projects</a>
+			<a href="#contact">Contact</a>
+		</nav>
+
 		<div id="wrapper">
 
-			<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<section id="intro" class="wrapper style1 fullscreen fade-up" style="display: flex; align-items: center;">
 				<div class="inner">
-					<h1>JAHANVI JESWANI</h1>
-					<p style="font-size: 1.2em; color: #aaa;">Data Science Graduate Student @ University of Washington <br> 
-					Ex-Data Scientist @ HP Inc. & ML Engineer @ Groww</p>
-					<ul class="icons">
-						<li><a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in"> LinkedIn</a></li>
-						<li><a href="https://github.com/jahanvi-j" class="icon brands fa-github"> GitHub</a></li>
-						<li><a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope"> Email</a></li>
-					</ul>
+					<h1 style="font-size: 3.5em; margin-bottom: 0.2em;">JAHANVI JESWANI</h1>
+					<p style="font-size: 1.4em; color: #888; margin-bottom: 1em;">AI/ML Engineer | Seattle, WA</p>
+					
+					<div class="top-links" style="margin-bottom: 2.5em;">
+						<a href="https://github.com/jahanvi-j" class="icon brands fa-github"></a>
+						<a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in"></a>
+						<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope"></a>
+					</div>
+
+					<p style="max-width: 800px;">
+						Graduate Data Science student at the University of Washington with a 3.90 GPA[cite: 5]. 
+						Expertise in architecting end-to-end predictive ML pipelines and agentic AI systems[cite: 16, 31]. 
+						Proven track record of deploying scalable models on billions of events for global enterprise systems[cite: 16].
+					</p>
 				</div>
 			</section>
 
 			<section id="experience" class="wrapper style2">
 				<div class="inner">
-					<h2 style="border-bottom: 1px solid #333; padding-bottom: 0.5em;">PROFESSIONAL EXPERIENCE</h2>
+					<h2 style="margin-bottom: 2em;">Experience</h2>
 					
 					<div class="exp-item">
-						<h3>Data Scientist, Print Supplies | HP Inc.</h3>
-						<p><em>March 2023 - August 2025 [cite: 13, 15]</em></p>
-						<p>Designed and deployed end-to-end predictive ML inference pipelines for CLV models (Cox PH, LightGBM, CatBoost) on billions of telemetry events[cite: 16]. Reduced runtime by 40% and enabled targeted retention strategies through a custom Go-To-Market dashboard served via Databricks REST APIs[cite: 16, 17]. Standardized big data transformations by deploying a PySpark preprocessing library as a Python wheel package[cite: 19].</p>
+						<h3>Data Scientist | HP Inc.</h3>
+						<p><em>March 2023 - August 2025</em></p>
+						<p>Designed and deployed end-to-end predictive ML inference pipelines for CLV models (Cox PH, LightGBM, CatBoost) on billions of telemetry events[cite: 14, 16]. Reduced runtime by 40% and built a Go-To-Market dashboard with a compensation simulator served via Databricks REST APIs[cite: 16, 17].</p>
 					</div>
 
 					<div class="exp-item">
 						<h3>Machine Learning Engineer-1 | Groww</h3>
-						<p><em>June 2022 - February 2023 [cite: 20, 22]</em></p>
-						<p>Built and deployed a real-time XGBoost propensity model processing millions of daily user interactions[cite: 23]. Achieved 82% precision, boosting product adoption by 6-8% QoQ[cite: 23]. Additionally, utilized BERT-based sentiment analysis and text mining on app reviews to identify drivers of low NPS[cite: 24].</p>
+						<p><em>June 2022 - February 2023</em></p>
+						<p>Developed a real-time XGBoost propensity model processing millions of daily interactions with 82% precision[cite: 21, 23]. Applied BERT-based sentiment analysis and text mining on app reviews to identify product improvement opportunities[cite: 24].</p>
+					</div>
+
+					<div class="exp-item">
+						<h3>Machine Learning Intern | Groww</h3>
+						<p><em>January 2022 - May 2022</em></p>
+						<p>Built a fraud detection system using YOLO and Tesseract OCR to identify fake registrations through identity documents, achieving 78% accuracy[cite: 26, 28, 29].</p>
 					</div>
 				</div>
 			</section>
 
 			<section id="projects" class="wrapper style3">
 				<div class="inner">
-					<h2 style="border-bottom: 1px solid #333; padding-bottom: 0.5em;">SELECTED RESEARCH & PROJECTS</h2>
+					<h2 style="margin-bottom: 2em;">Projects & Publications</h2>
 					
 					<div class="project-item">
 						<h3>Agentic Customer Service Analyst (2025)</h3>
-						<p>Engineered an Al agent using LangChain and GPT-4o to implement a Plan-as-Code pattern[cite: 31, 33]. Developed a closed-loop system that automates complex retail workflows by executing model-generated code against a secure TinyDB sandbox with multi-stage reasoning documentation[cite: 34, 35].</p>
+						<p>Developed an AI agent using LangChain and GPT-4o to implement a Plan-as-Code pattern[cite: 31, 33]. Engineered a closed-loop system automating complex retail workflows by executing model-generated code against a secure sandbox[cite: 34, 35].</p>
 					</div>
 
 					<div class="project-item">
-						<h3>EEG Bio-metric Authentication (IIT Varanasi Research)</h3>
-						<p>Architected an end-to-end EEG pipeline using XGBoost and Bayesian optimization to achieve 81% multiclass accuracy[cite: 37]. This research on low valence, low arousal (LVLA) stimuli signals was published and presented at MIE 2023[cite: 38].</p>
-						<p><a href="https://ebooks.iospress.nl/doi/10.3233/SHTI1230114" target="_blank" style="text-decoration: underline;">View Publication: Caring is Sharing, IOS Press </a></p>
+						<h3>EEG Biometric Authentication (IIT Varanasi)</h3>
+						<p>Architected an end-to-end EEG pipeline using XGBoost and Bayesian optimization to achieve 81% accuracy[cite: 37]. Research published in <em>Caring is Sharing: Exploiting the Value in Data for Health and Innovation</em>[cite: 43, 44].</p>
+						<a href="https://ebooks.iospress.nl/doi/10.3233/SHTI1230114" target="_blank" style="color: #fff; text-decoration: underline;">View Publication</a>
 					</div>
 
 					<div class="project-item">
-						<h3>Security & Fraud Detection System</h3>
-						<p>Built an account security system using YOLO (Computer Vision) and Tesseract OCR to identify fraudulent registrations through identity documents[cite: 28]. Achieved 78% accuracy in detecting forged details at scale[cite: 29].</p>
+						<h3>Scalable Preprocessing Library</h3>
+						<p>Built and deployed a PySpark preprocessing library as a Python wheel package, standardizing scalable data transformation across big data projects[cite: 19].</p>
 					</div>
 				</div>
 			</section>
 
-			<footer id="footer" class="wrapper">
+			<section id="contact" class="wrapper style1">
 				<div class="inner">
-					<p>&copy; Jahanvi Jeswani. Master of Science in Data Science, UW[cite: 5].</p>
+					<h2 style="margin-bottom: 1.5em;">Get In Touch</h2>
+					<div class="contact-footer">
+						<p><a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope"> jjeswani@uw.edu</a></p>
+						<p><a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in"> LinkedIn</a></p>
+						<p><a href="https://github.com/jahanvi-j" class="icon brands fa-github"> GitHub</a></p>
+					</div>
+					<hr>
+					<p style="font-size: 0.8em; color: #555;">&copy; Jahanvi Jeswani | University of Washington.</p>
 				</div>
-			</footer>
+			</section>
 
 		</div>
 
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			// Smooth scrolling for the navigation bar
+			$(document).ready(function() {
+				$('#nav-bar a').scrolly({
+					speed: 1000,
+					offset: 60
+				});
+			});
+		</script>
 
 	</body>
 </html>
