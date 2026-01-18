@@ -6,13 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Global Web-Style Background */
+			/* Enhanced Global Grid Background */
 			html, body, #wrapper { 
 				background-color: #000000 !important; 
 				background-image: 
-					radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-					linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-					linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px) !important;
+					radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+					linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+					linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) !important;
 				background-size: 20px 20px, 40px 40px, 40px 40px !important;
 				color: #d1d1d1 !important;
 			}
@@ -24,24 +24,26 @@
 			#nav-bar a { color: #888; text-decoration: none; margin: 0 15px; font-size: 0.85em; letter-spacing: 2px; text-transform: uppercase; }
 			#nav-bar a:hover { color: #fff; }
 
-			.inner { max-width: 1100px !important; margin: 0 auto !important; padding: 4em 2em !important; }
+			.inner { max-width: 1150px !important; margin: 0 auto !important; padding: 4em 2em !important; }
 			
 			/* Layout for Photo on Right */
 			.intro-container {
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
 				justify-content: space-between;
-				gap: 50px;
+				gap: 60px;
 				padding-top: 100px;
 			}
-			.intro-text { flex: 2.5; }
-			.intro-image { flex: 1; text-align: right; }
+			.intro-text { flex: 2; }
+			.intro-image { flex: 1.2; text-align: right; }
 			.intro-image img {
-				width: 280px;
+				width: 100%; /* Scales to container */
+				max-width: 450px;
 				height: auto;
-				border-radius: 4px;
-				border: 1px solid #333;
-				filter: grayscale(20%);
+				border-radius: 25px; /* Curved edges */
+				border: 1px solid #444;
+				filter: grayscale(10%);
+				box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 			}
 
 			/* Typography */
@@ -53,13 +55,14 @@
 			.item em { color: #777; font-style: normal; display: block; margin-bottom: 1em; font-size: 0.9em; }
 
 			/* Skills Grid */
-			.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-			.skill-cat h4 { color: #fff; font-size: 0.9em; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-			.skill-cat p { font-size: 0.95em; color: #888; line-height: 1.5; }
+			.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+			.skill-cat h4 { color: #fff; font-size: 0.9em; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+			.skill-cat p { font-size: 0.95em; color: #999; line-height: 1.6; margin: 0; }
 
-			@media (max-width: 768px) {
+			@media (max-width: 980px) {
 				.intro-container { flex-direction: column-reverse; text-align: center; }
-				.intro-image { text-align: center; }
+				.intro-image { text-align: center; margin-bottom: 2em; }
+				.intro-image img { max-width: 300px; }
 			}
 		</style>
 	</head>
@@ -89,15 +92,15 @@
 								<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope" style="font-size: 1.5em; color: #fff;"></a>
 							</div>
 
-							<p style="line-height: 1.7;">
+							<p style="line-height: 1.8; font-size: 1.05em;">
 								I am a Master’s in Data Science student at the University of Washington specializing in scalable machine learning and agentic AI systems. My background focuses on bridging the gap between high-dimensional statistical theory and production-grade reliability, with a proven track record of architecting end-to-end predictive pipelines at scale.
 							</p>
-							<p style="line-height: 1.7;">
-								Previously, I worked as a Data Scientist at **HP Inc.** and a Machine Learning Engineer at **Groww**, where I engineered ML inference pipelines processing billions of telemetry events and deployed real-time propensity models reaching millions of users. My current work is focused on NLP and the development of agentic AI systems, specifically exploring model reliability and scalable document intelligence.
+							<p style="line-height: 1.8; font-size: 1.05em;">
+								Previously, I worked as a Data Scientist at HP Inc. and a Machine Learning Engineer at Groww, where I engineered ML inference pipelines processing billions of clickstream events and deployed real-time propensity models, and fetched insight that guided marketing and retention stratergies. My current work is focused on NLP and the development of agentic AI systems, specifically exploring model reliability and scalable document intelligence.
 							</p>
 						</div>
 						<div class="intro-image">
-							<img src="images/headshot.png" alt="Jahanvi Jeswani">
+							<img src="images/headshot.png" alt="Jahanvi Jeswani Profile">
 						</div>
 					</div>
 				</div>
@@ -109,12 +112,12 @@
 					<div class="item">
 						<h3>Data Scientist | HP Inc.</h3>
 						<em>March 2023 - August 2025</em>
-						<p>Architected predictive ML pipelines for CLV models on billions of telemetry events, reducing runtime by 40%. Developed a custom dashboard and compensation simulator via Databricks REST APIs.</p>
+						<p>Architected predictive ML pipelines for CLV models on billions of telemetry events. Developed a custom dashboard and compensation simulator via Databricks REST APIs.</p>
 					</div>
 					<div class="item">
 						<h3>Machine Learning Engineer | Groww</h3>
 						<em>June 2022 - February 2023</em>
-						<p>Deployed real-time XGBoost propensity models with 82% precision. Implemented BERT-based sentiment analysis on user reviews to drive product prioritization.</p>
+						<p>Implemented BERT-based sentiment analysis on user reviews to drive product prioritization. Implemented prediction models to improve recommendation systems.</p>
 					</div>
 				</div>
 			</section>
@@ -128,7 +131,7 @@
 					</div>
 					<div class="item">
 						<h3>Identity Fraud Detection System</h3>
-						<p>Designed a pipeline using YOLO and Tesseract OCR to detect fraudulent identity documents, achieving 78% accuracy.</p>
+						<p>Designed a pipeline using YOLO and Tesseract OCR to detect fraudulent identity documents and flag out users.</p>
 					</div>
 				</div>
 			</section>
@@ -138,7 +141,7 @@
 					<h2>Publication</h2>
 					<div class="item">
 						<h3>EEG-Based Biometric Authentication</h3>
-						<p>Developed an authentication pipeline utilizing Low Valence Low Arousal stimuli and XGBoost with Bayesian optimization. Presented at MIE 2023.</p>
+						<p>Developed an authentication pipeline utilizing Low Valence Low Arousal stimuli and XGBoost with Bayesian optimization. Presented at Medical Informatics Europe Conference (MIE), 2023.</p>
 						<a href="https://pubmed.ncbi.nlm.nih.gov/37203658/" target="_blank" style="color: #fff; text-decoration: underline;">View on PubMed</a>
 					</div>
 				</div>
@@ -150,19 +153,19 @@
 					<div class="skills-grid">
 						<div class="skill-cat">
 							<h4>Languages</h4>
-							[cite_start]<p>Python, SQL, R, C++, Java [cite: 48]</p>
+							<p>Python, SQL, Pyspark, R, C++, MATLAB</p>
 						</div>
 						<div class="skill-cat">
 							<h4>ML & AI</h4>
-							[cite_start]<p>PyTorch, TensorFlow, Scikit-learn, LangChain, Transformers [cite: 49]</p>
+							<p>PyTorch, TensorFlow, Scikit-learn, LangChain, Transformers (BERT, LLMs), XGBoost, Bayesian Optimization</p>
 						</div>
 						<div class="skill-cat">
 							<h4>Data & Cloud</h4>
-							[cite_start]<p>PySpark, Databricks, AWS, Snowflake, PostgreSQL [cite: 49]</p>
+							<p>PySpark, Databricks, AWS (S3, EC2), Azure, Snowflake, ETL Pipelines</p>
 						</div>
 						<div class="skill-cat">
-							<h4>Tools</h4>
-							[cite_start]<p>Docker, Kubernetes, Git, MLflow, Airflow [cite: 49]</p>
+							<h4>Tools & Frameworks</h4>
+							<p>Docker, Kubernetes, Git, MLflow, Apache Airflow, Tableau, PowerBI, Flask/FastAPI</p>
 						</div>
 					</div>
 				</div>
@@ -173,9 +176,9 @@
 					<hr style="border: 0; border-top: 1px solid #222; margin-bottom: 4em;">
 					<h2>Get In Touch</h2>
 					<div style="margin-top: 2em;">
-						<a href="mailto:jjeswani@uw.edu" style="margin: 0 20px; color: #fff;">Email</a>
-						<a href="https://linkedin.com/in/jahanvijeswani" style="margin: 0 20px; color: #fff;">LinkedIn</a>
-						<a href="https://github.com/jahanvi-j" style="margin: 0 20px; color: #fff;">GitHub</a>
+						<a href="mailto:jjeswani@uw.edu" style="margin: 0 20px; color: #fff; text-decoration: none;">Email</a>
+						<a href="https://linkedin.com/in/jahanvijeswani" style="margin: 0 20px; color: #fff; text-decoration: none;">LinkedIn</a>
+						<a href="https://github.com/jahanvi-j" style="margin: 0 20px; color: #fff; text-decoration: none;">GitHub</a>
 					</div>
 				</div>
 			</section>
