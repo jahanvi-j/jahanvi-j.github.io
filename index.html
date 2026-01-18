@@ -21,11 +21,12 @@
 				position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.9);
 				z-index: 10000; border-bottom: 1px solid #333; text-align: center; padding: 15px 0;
 			}
-			#nav-bar a { color: #888; text-decoration: none; margin: 0 20px; font-size: 0.85em; letter-spacing: 2px; text-transform: uppercase; }
+			#nav-bar a { color: #888; text-decoration: none; margin: 0 15px; font-size: 0.85em; letter-spacing: 2px; text-transform: uppercase; }
+			#nav-bar a:hover { color: #fff; }
 
 			.inner { max-width: 1100px !important; margin: 0 auto !important; padding: 4em 2em !important; }
 			
-			/* Layout for Photo on Left */
+			/* Layout for Photo on Right */
 			.intro-container {
 				display: flex;
 				align-items: center;
@@ -33,7 +34,8 @@
 				gap: 50px;
 				padding-top: 100px;
 			}
-			.intro-image { flex: 1; text-align: left; }
+			.intro-text { flex: 2.5; }
+			.intro-image { flex: 1; text-align: right; }
 			.intro-image img {
 				width: 280px;
 				height: auto;
@@ -41,19 +43,22 @@
 				border: 1px solid #333;
 				filter: grayscale(20%);
 			}
-			.intro-text { flex: 2.5; }
 
-			/* Typography Updates */
+			/* Typography */
 			h1 { font-size: 2.2em; margin-bottom: 0.1em; color: #fff !important; letter-spacing: 3px; }
 			h2 { font-size: 1.5em; color: #fff !important; border-bottom: 1px solid #222; padding-bottom: 0.5em; margin-bottom: 1.5em; text-transform: uppercase; }
 			
-			.top-links a { font-size: 1.5em; margin-right: 20px; color: #fff !important; }
 			.item { margin-bottom: 4em; border-left: 1px solid #333; padding-left: 2em; }
 			.item h3 { font-size: 1.2em; color: #fff !important; margin-bottom: 0.3em; }
 			.item em { color: #777; font-style: normal; display: block; margin-bottom: 1em; font-size: 0.9em; }
 
+			/* Skills Grid */
+			.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+			.skill-cat h4 { color: #fff; font-size: 0.9em; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+			.skill-cat p { font-size: 0.95em; color: #888; line-height: 1.5; }
+
 			@media (max-width: 768px) {
-				.intro-container { flex-direction: column; text-align: center; }
+				.intro-container { flex-direction: column-reverse; text-align: center; }
 				.intro-image { text-align: center; }
 			}
 		</style>
@@ -65,7 +70,8 @@
 			<a href="#experience">Experience</a>
 			<a href="#projects">Projects</a>
 			<a href="#publication">Publication</a>
-			<a href="#contact">Contact</a>
+			<a href="#skills">Skills</a>
+			<a href="images/Jahanvi_Jeswani_Resume_ML.pdf" target="_blank">Resume</a>
 		</nav>
 
 		<div id="wrapper">
@@ -73,17 +79,14 @@
 			<section id="intro">
 				<div class="inner">
 					<div class="intro-container">
-						<div class="intro-image">
-							<img src="headshot.jpg" alt="Jahanvi Jeswani">
-						</div>
 						<div class="intro-text">
 							<h1>JAHANVI JESWANI</h1>
 							<p style="font-size: 1.1em; color: #888; margin-top: 0;">AI/ML Engineer | Seattle, WA</p>
 							
-							<div class="top-links" style="margin: 1.5em 0;">
-								<a href="https://github.com/jahanvi-j" class="icon brands fa-github"></a>
-								<a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in"></a>
-								<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope"></a>
+							<div style="margin: 1.5em 0;">
+								<a href="https://github.com/jahanvi-j" class="icon brands fa-github" style="font-size: 1.5em; margin-right: 20px; color: #fff;"></a>
+								<a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in" style="font-size: 1.5em; margin-right: 20px; color: #fff;"></a>
+								<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope" style="font-size: 1.5em; color: #fff;"></a>
 							</div>
 
 							<p style="line-height: 1.7;">
@@ -92,6 +95,9 @@
 							<p style="line-height: 1.7;">
 								Previously, I worked as a Data Scientist at **HP Inc.** and a Machine Learning Engineer at **Groww**, where I engineered ML inference pipelines processing billions of telemetry events and deployed real-time propensity models reaching millions of users. My current work is focused on NLP and the development of agentic AI systems, specifically exploring model reliability and scalable document intelligence.
 							</p>
+						</div>
+						<div class="intro-image">
+							<img src="images/headshot.png" alt="Jahanvi Jeswani">
 						</div>
 					</div>
 				</div>
@@ -103,12 +109,12 @@
 					<div class="item">
 						<h3>Data Scientist | HP Inc.</h3>
 						<em>March 2023 - August 2025</em>
-						<p>Architected predictive ML pipelines for Customer Lifetime Value (CLV) models on billions of telemetry events, achieving a 40% reduction in runtime. Developed a custom dashboard and compensation simulator using Databricks REST APIs for strategic market insights.</p>
+						<p>Architected predictive ML pipelines for CLV models on billions of telemetry events, reducing runtime by 40%. Developed a custom dashboard and compensation simulator via Databricks REST APIs.</p>
 					</div>
 					<div class="item">
 						<h3>Machine Learning Engineer | Groww</h3>
 						<em>June 2022 - February 2023</em>
-						<p>Deployed real-time XGBoost propensity models reaching millions of daily users with 82% precision. Implemented BERT-based sentiment analysis and text mining on user reviews to drive product feature prioritization.</p>
+						<p>Deployed real-time XGBoost propensity models with 82% precision. Implemented BERT-based sentiment analysis on user reviews to drive product prioritization.</p>
 					</div>
 				</div>
 			</section>
@@ -118,11 +124,11 @@
 					<h2>Projects</h2>
 					<div class="item">
 						<h3>Agentic Customer Service Analyst</h3>
-						<p>Developed an AI agent utilizing LangChain and GPT-4o to implement a "Plan-as-Code" pattern. The system automates retail workflows by executing model-generated code in secure sandboxed environments.</p>
+						<p>Developed an AI agent utilizing LangChain and GPT-4o to implement a "Plan-as-Code" pattern. Automates retail workflows via model-generated code execution in secure sandboxes.</p>
 					</div>
 					<div class="item">
 						<h3>Identity Fraud Detection System</h3>
-						<p>Designed a security pipeline using YOLO and Tesseract OCR to detect fraudulent registrations via identity document analysis, achieving 78% accuracy in automated forged detail detection.</p>
+						<p>Designed a pipeline using YOLO and Tesseract OCR to detect fraudulent identity documents, achieving 78% accuracy.</p>
 					</div>
 				</div>
 			</section>
@@ -132,14 +138,39 @@
 					<h2>Publication</h2>
 					<div class="item">
 						<h3>EEG-Based Biometric Authentication</h3>
-						<p>Researched and developed an authentication pipeline utilizing Low Valence Low Arousal stimuli and XGBoost-based classification with Bayesian optimization. Achieving 81% multiclass accuracy, this work was presented at the MIE 2023 conference.</p>
+						<p>Developed an authentication pipeline utilizing Low Valence Low Arousal stimuli and XGBoost with Bayesian optimization. Presented at MIE 2023.</p>
 						<a href="https://pubmed.ncbi.nlm.nih.gov/37203658/" target="_blank" style="color: #fff; text-decoration: underline;">View on PubMed</a>
+					</div>
+				</div>
+			</section>
+
+			<section id="skills">
+				<div class="inner">
+					<h2>Technical Skills</h2>
+					<div class="skills-grid">
+						<div class="skill-cat">
+							<h4>Languages</h4>
+							[cite_start]<p>Python, SQL, R, C++, Java [cite: 48]</p>
+						</div>
+						<div class="skill-cat">
+							<h4>ML & AI</h4>
+							[cite_start]<p>PyTorch, TensorFlow, Scikit-learn, LangChain, Transformers [cite: 49]</p>
+						</div>
+						<div class="skill-cat">
+							<h4>Data & Cloud</h4>
+							[cite_start]<p>PySpark, Databricks, AWS, Snowflake, PostgreSQL [cite: 49]</p>
+						</div>
+						<div class="skill-cat">
+							<h4>Tools</h4>
+							[cite_start]<p>Docker, Kubernetes, Git, MLflow, Airflow [cite: 49]</p>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<section id="contact">
 				<div class="inner" style="text-align: center; padding-bottom: 8em;">
+					<hr style="border: 0; border-top: 1px solid #222; margin-bottom: 4em;">
 					<h2>Get In Touch</h2>
 					<div style="margin-top: 2em;">
 						<a href="mailto:jjeswani@uw.edu" style="margin: 0 20px; color: #fff;">Email</a>
