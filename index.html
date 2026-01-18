@@ -6,46 +6,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Professional Black Aesthetic Overrides */
-			body, #wrapper, section { background-color: #000000 !important; color: #d1d1d1 !important; }
-			h1, h2, h3 { color: #ffffff !important; letter-spacing: 2px; text-transform: uppercase; }
-			p, li { line-height: 1.8; font-size: 1.05em; }
-			
-			/* Navigation Bar Styling */
+			/* Global Background Pattern */
+			body, #wrapper { 
+				background-color: #000000 !important; 
+				background-image: linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px), 
+								  linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px) !important;
+				background-size: 50px 50px !important;
+				color: #d1d1d1 !important; 
+			}
+
+			/* Navigation Bar */
 			#nav-bar {
 				position: fixed;
 				top: 0;
 				width: 100%;
-				background: rgba(0, 0, 0, 0.9);
+				background: rgba(0, 0, 0, 0.95);
 				z-index: 10000;
 				border-bottom: 1px solid #222;
 				text-align: center;
 				padding: 15px 0;
 			}
-			#nav-bar a {
-				color: #888;
-				text-decoration: none;
-				margin: 0 20px;
-				font-size: 0.9em;
-				letter-spacing: 1px;
-				transition: 0.3s;
-			}
+			#nav-bar a { color: #888; text-decoration: none; margin: 0 20px; font-size: 0.9em; letter-spacing: 1px; transition: 0.3s; }
 			#nav-bar a:hover { color: #fff; }
 
-			/* Layout Adjustments */
-			.inner { max-width: 1000px !important; margin: 0 auto !important; padding: 4em 2em; }
-			.exp-item, .project-item { 
-				margin-bottom: 5em; 
-				border-left: 1px solid #333; 
-				padding-left: 2.5em; 
-				transition: border-color 0.3s;
-			}
-			.exp-item:hover { border-left-color: #ffffff; }
+			/* Section Styling */
+			section { background: transparent !important; border: none !important; }
+			.inner { max-width: 1000px !important; margin: 0 auto !important; padding: 6em 2em; }
+			h1, h2, h3 { color: #ffffff !important; letter-spacing: 2px; text-transform: uppercase; }
 			
-			/* Icon Styling */
-			.top-links .icon { font-size: 1.5em; margin: 0 15px; color: #fff !important; }
-			.contact-footer .icon { margin-right: 10px; }
-			hr { border: 0; border-top: 1px solid #222; margin: 3em 0; }
+			/* Links & Icons */
+			.top-links a { font-size: 1.8em; margin-right: 25px; color: #fff !important; transition: 0.3s; }
+			.top-links a:hover { opacity: 0.6; }
+			.exp-item, .project-item { margin-bottom: 4em; border-left: 1px solid #333; padding-left: 2em; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -59,81 +51,64 @@
 
 		<div id="wrapper">
 
-			<section id="intro" class="wrapper style1 fullscreen fade-up" style="display: flex; align-items: center;">
+			<section id="intro" class="wrapper style1 fullscreen fade-up">
 				<div class="inner">
-					<h1 style="font-size: 3.5em; margin-bottom: 0.2em;">JAHANVI JESWANI</h1>
-					<p style="font-size: 1.4em; color: #888; margin-bottom: 1em;">AI/ML Engineer | Seattle, WA</p>
+					<h1 style="font-size: 3.5em; margin-bottom: 0.1em;">JAHANVI JESWANI</h1>
+					<p style="font-size: 1.5em; color: #888; margin-bottom: 0.5em;">AI/ML Engineer | Seattle, WA</p>
 					
-					<div class="top-links" style="margin-bottom: 2.5em;">
+					<div class="top-links" style="margin-bottom: 2em;">
 						<a href="https://github.com/jahanvi-j" class="icon brands fa-github"></a>
 						<a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in"></a>
 						<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope"></a>
 					</div>
 
-					<p style="max-width: 800px;">
-						Graduate Data Science student at the University of Washington with a 3.90 GPA[cite: 5]. 
-						Expertise in architecting end-to-end predictive ML pipelines and agentic AI systems[cite: 16, 31]. 
-						Proven track record of deploying scalable models on billions of events for global enterprise systems[cite: 16].
+					<p style="font-size: 1.2em; max-width: 850px; line-height: 1.8;">
+						I am a Graduate Data Science student at the University of Washington (3.90 GPA) specializing in scalable machine learning and agentic AI systems. 
+						With a professional background at <strong>HP Inc.</strong> and <strong>Groww</strong>, I have engineered predictive pipelines processing billions of telemetry events and deployed real-time propensity models reaching millions of users. 
+						My work focuses on bridging the gap between high-dimensional statistical theory and production-grade AI reliability.
 					</p>
 				</div>
 			</section>
 
 			<section id="experience" class="wrapper style2">
 				<div class="inner">
-					<h2 style="margin-bottom: 2em;">Experience</h2>
-					
+					<h2 style="margin-bottom: 2em; border-bottom: 1px solid #222; padding-bottom: 0.5em;">Experience</h2>
 					<div class="exp-item">
 						<h3>Data Scientist | HP Inc.</h3>
 						<p><em>March 2023 - August 2025</em></p>
-						<p>Designed and deployed end-to-end predictive ML inference pipelines for CLV models (Cox PH, LightGBM, CatBoost) on billions of telemetry events[cite: 14, 16]. Reduced runtime by 40% and built a Go-To-Market dashboard with a compensation simulator served via Databricks REST APIs[cite: 16, 17].</p>
+						<p>Designed end-to-end predictive ML pipelines for CLV models on billions of telemetry events, reducing runtime by 40%. Built a custom Go-To-Market dashboard and compensation simulator served via Databricks REST APIs.</p>
 					</div>
-
 					<div class="exp-item">
 						<h3>Machine Learning Engineer-1 | Groww</h3>
 						<p><em>June 2022 - February 2023</em></p>
-						<p>Developed a real-time XGBoost propensity model processing millions of daily interactions with 82% precision[cite: 21, 23]. Applied BERT-based sentiment analysis and text mining on app reviews to identify product improvement opportunities[cite: 24].</p>
-					</div>
-
-					<div class="exp-item">
-						<h3>Machine Learning Intern | Groww</h3>
-						<p><em>January 2022 - May 2022</em></p>
-						<p>Built a fraud detection system using YOLO and Tesseract OCR to identify fake registrations through identity documents, achieving 78% accuracy[cite: 26, 28, 29].</p>
+						<p>Deployed real-time XGBoost propensity models with 82% precision, boosting product adoption by 6-8% QoQ. Utilized BERT for sentiment analysis on app reviews to drive product roadmap improvements.</p>
 					</div>
 				</div>
 			</section>
 
 			<section id="projects" class="wrapper style3">
 				<div class="inner">
-					<h2 style="margin-bottom: 2em;">Projects & Publications</h2>
-					
+					<h2 style="margin-bottom: 2em; border-bottom: 1px solid #222; padding-bottom: 0.5em;">Projects & Publications</h2>
 					<div class="project-item">
-						<h3>Agentic Customer Service Analyst (2025)</h3>
-						<p>Developed an AI agent using LangChain and GPT-4o to implement a Plan-as-Code pattern[cite: 31, 33]. Engineered a closed-loop system automating complex retail workflows by executing model-generated code against a secure sandbox[cite: 34, 35].</p>
+						<h3>Agentic Customer Service Analyst</h3>
+						<p>Implemented a "Plan-as-Code" pattern using LangChain and GPT-4o to automate retail workflows through model-generated code execution in secure sandboxes.</p>
 					</div>
-
 					<div class="project-item">
-						<h3>EEG Biometric Authentication (IIT Varanasi)</h3>
-						<p>Architected an end-to-end EEG pipeline using XGBoost and Bayesian optimization to achieve 81% accuracy[cite: 37]. Research published in <em>Caring is Sharing: Exploiting the Value in Data for Health and Innovation</em>[cite: 43, 44].</p>
-						<a href="https://ebooks.iospress.nl/doi/10.3233/SHTI1230114" target="_blank" style="color: #fff; text-decoration: underline;">View Publication</a>
-					</div>
-
-					<div class="project-item">
-						<h3>Scalable Preprocessing Library</h3>
-						<p>Built and deployed a PySpark preprocessing library as a Python wheel package, standardizing scalable data transformation across big data projects[cite: 19].</p>
+						<h3>EEG Biometric Authentication (Research)</h3>
+						<p>Architected an EEG-based authentication pipeline using Bayesian optimization, achieving 81% accuracy. Research published in <em>Caring is Sharing</em>, 2023.</p>
+						<a href="https://ebooks.iospress.nl/doi/10.3233/SHTI1230114" target="_blank" style="text-decoration: underline; color: #fff;">View Publication</a>
 					</div>
 				</div>
 			</section>
 
 			<section id="contact" class="wrapper style1">
-				<div class="inner">
-					<h2 style="margin-bottom: 1.5em;">Get In Touch</h2>
-					<div class="contact-footer">
-						<p><a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope"> jjeswani@uw.edu</a></p>
-						<p><a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in"> LinkedIn</a></p>
-						<p><a href="https://github.com/jahanvi-j" class="icon brands fa-github"> GitHub</a></p>
+				<div class="inner" style="text-align: center;">
+					<h2>Get In Touch</h2>
+					<div style="margin-top: 2em;">
+						<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope" style="margin: 0 15px;"> jjeswani@uw.edu</a>
+						<a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in" style="margin: 0 15px;"> LinkedIn</a>
+						<a href="https://github.com/jahanvi-j" class="icon brands fa-github" style="margin: 0 15px;"> GitHub</a>
 					</div>
-					<hr>
-					<p style="font-size: 0.8em; color: #555;">&copy; Jahanvi Jeswani | University of Washington.</p>
 				</div>
 			</section>
 
@@ -143,14 +118,9 @@
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script>
-			// Smooth scrolling for the navigation bar
 			$(document).ready(function() {
-				$('#nav-bar a').scrolly({
-					speed: 1000,
-					offset: 60
-				});
+				$('#nav-bar a').scrolly({ speed: 800, offset: 60 });
 			});
 		</script>
-
 	</body>
 </html>
