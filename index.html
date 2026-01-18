@@ -5,62 +5,63 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		
-		<link rel="icon" type="images/icon.png" href="images/favicon.png">
+		<link rel="icon" type="image/png" href="images/icon.png">
 		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Enhanced Global Grid Background - Visible & Symmetrical */
+			/* Subtle Slate Grid - Professional and Low-Contrast */
 			html, body, #wrapper { 
 				background-color: #000000 !important; 
 				background-image: 
-					linear-gradient(rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
-					linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px) !important;
-				background-size: 50px 50px !important;
+					linear-gradient(rgba(100, 110, 140, 0.07) 1px, transparent 1px),
+					linear-gradient(90deg, rgba(100, 110, 140, 0.07) 1px, transparent 1px) !important;
+				background-size: 45px 45px !important;
 				color: #d1d1d1 !important;
 			}
 
 			/* Navigation Bar */
 			#nav-bar {
 				position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.95);
-				z-index: 10000; border-bottom: 1px solid #444; text-align: center; padding: 15px 0;
+				z-index: 10000; border-bottom: 1px solid #222; text-align: center; padding: 12px 0;
 			}
 			#nav-bar a { color: #888; text-decoration: none; margin: 0 15px; font-size: 0.8em; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; }
 			#nav-bar a:hover { color: #fff; }
 
-			.inner { max-width: 1150px !important; margin: 0 auto !important; padding: 4em 2em !important; }
+			/* Reduced Section Gaps */
+			.inner { max-width: 1100px !important; margin: 0 auto !important; padding: 3.5em 2em !important; }
 			
 			/* Intro Section Layout */
 			.intro-container {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				gap: 60px;
-				padding-top: 100px;
+				gap: 50px;
+				padding-top: 80px; /* Reduced top padding */
 			}
 			.intro-text { flex: 2; }
-			.intro-image { flex: 1.2; text-align: right; }
+			.intro-image { flex: 1.1; text-align: right; }
 			.intro-image img {
 				width: 100%;
-				max-width: 420px;
+				max-width: 400px;
 				height: auto;
-				border-radius: 30px;
-				border: 1px solid #555;
+				border-radius: 25px;
+				border: 1px solid #333;
 				filter: grayscale(10%);
-				box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 			}
 
 			/* Typography & Content Items */
 			h1 { font-size: 2.1em; margin-bottom: 0.1em; color: #fff !important; letter-spacing: 2px; }
-			h2 { font-size: 1.4em; color: #fff !important; border-bottom: 1px solid #333; padding-bottom: 0.5em; margin-bottom: 1.5em; text-transform: uppercase; }
+			h2 { font-size: 1.35em; color: #fff !important; border-bottom: 1px solid #222; padding-bottom: 0.4em; margin-bottom: 1.2em; text-transform: uppercase; }
 			
-			.item { margin-bottom: 4em; border-left: 2px solid #333; padding-left: 2em; transition: border-left 0.3s; }
-			.item:hover { border-left-color: #fff; }
-			.item h3 { font-size: 1.2em; color: #fff !important; margin-bottom: 0.3em; }
-			.item em { color: #888; font-style: normal; display: block; margin-bottom: 1em; font-size: 0.9em; }
+			.item { margin-bottom: 3em; border-left: 2px solid #222; padding-left: 1.8em; }
+			.item:hover { border-left-color: #444; }
+			.item h3 { font-size: 1.15em; color: #fff !important; margin-bottom: 0.2em; }
+			.item em { color: #777; font-style: normal; display: block; margin-bottom: 0.8em; font-size: 0.85em; }
 
 			/* Skills Layout */
-			.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
-			.skill-cat h4 { color: #fff; font-size: 0.9em; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #222; display: inline-block; padding-bottom: 3px; }
+			.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; }
+			.skill-cat h4 { color: #fff; font-size: 0.85em; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #222; display: inline-block; padding-bottom: 2px; }
 			.skill-cat p { font-size: 0.9em; color: #999; line-height: 1.6; }
 
 			@media (max-width: 980px) {
@@ -95,10 +96,10 @@
 								<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope" style="font-size: 1.5em; color: #fff;"></a>
 							</div>
 
-							<p style="line-height: 1.8; font-size: 1.05em;">
+							<p style="line-height: 1.7; font-size: 1.05em;">
 								I am a Master’s in Data Science student at the University of Washington specializing in scalable machine learning and agentic AI systems. My background focuses on bridging the gap between high-dimensional statistical theory and production-grade reliability, with a proven track record of architecting end-to-end predictive pipelines at scale.
 							</p>
-							<p style="line-height: 1.8; font-size: 1.05em;">
+							<p style="line-height: 1.7; font-size: 1.05em;">
 								Previously, I worked as a Data Scientist at HP Inc. and a Machine Learning Engineer at Groww, where I engineered ML inference pipelines processing billions of clickstream events, deployed real-time propensity models, and derived insights that guided marketing and retention strategies. My current work is focused on NLP and the development of agentic AI systems, specifically exploring model reliability and scalable document intelligence.
 							</p>
 						</div>
@@ -160,23 +161,23 @@
 						</div>
 						<div class="skill-cat">
 							<h4>ML & AI</h4>
-							<p>PyTorch, TensorFlow, Scikit-learn, LangChain, Transformers (BERT, LLMs), XGBoost, Bayesian Optimization</p>
+							<p>PyTorch, TensorFlow, Scikit-learn, LangChain, Transformers, XGBoost, Bayesian Optimization</p>
 						</div>
 						<div class="skill-cat">
 							<h4>Data & Cloud</h4>
 							<p>PySpark, Databricks, AWS (S3, EC2), Azure, Snowflake, ETL Pipelines</p>
 						</div>
 						<div class="skill-cat">
-							<h4>Tools & Frameworks</h4>
-							<p>Docker, Kubernetes, Git, MLflow, Apache Airflow, Tableau, PowerBI, Flask/FastAPI</p>
+							<h4>Tools</h4>
+							<p>Docker, Kubernetes, Git, MLflow, Airflow, Tableau, PowerBI, Flask/FastAPI</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<section id="contact">
-				<div class="inner" style="text-align: center; padding-bottom: 8em;">
-					<hr style="border: 0; border-top: 1px solid #333; margin-bottom: 4em;">
+				<div class="inner" style="text-align: center; padding-bottom: 6em;">
+					<hr style="border: 0; border-top: 1px solid #1a1a1a; margin-bottom: 3.5em;">
 					<h2>Get In Touch</h2>
 					<div style="margin-top: 2em;">
 						<a href="mailto:jjeswani@uw.edu" style="margin: 0 20px; color: #fff; text-decoration: none;">Email</a>
@@ -198,4 +199,3 @@
 		</script>
 	</body>
 </html>
-
