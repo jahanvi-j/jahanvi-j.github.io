@@ -6,13 +6,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Global Background Pattern */
-			body, #wrapper { 
+			/* Global Background and Grid Pattern */
+			html, body, #wrapper { 
 				background-color: #000000 !important; 
-				background-image: linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px), 
-								  linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px) !important;
-				background-size: 50px 50px !important;
-				color: #d1d1d1 !important; 
+				/* This creates the consistent line pattern throughout the site */
+				background-image: 
+					linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+					linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) !important;
+				background-size: 40px 40px !important;
+				color: #d1d1d1 !important;
+				margin: 0;
+				padding: 0;
 			}
 
 			/* Navigation Bar */
@@ -20,24 +24,34 @@
 				position: fixed;
 				top: 0;
 				width: 100%;
-				background: rgba(0, 0, 0, 0.95);
+				background: rgba(0, 0, 0, 0.9);
 				z-index: 10000;
-				border-bottom: 1px solid #222;
+				border-bottom: 1px solid #333;
 				text-align: center;
 				padding: 15px 0;
 			}
-			#nav-bar a { color: #888; text-decoration: none; margin: 0 20px; font-size: 0.9em; letter-spacing: 1px; transition: 0.3s; }
+			#nav-bar a { color: #888; text-decoration: none; margin: 0 20px; font-size: 0.85em; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
 			#nav-bar a:hover { color: #fff; }
 
-			/* Section Styling */
-			section { background: transparent !important; border: none !important; }
-			.inner { max-width: 1000px !important; margin: 0 auto !important; padding: 6em 2em; }
-			h1, h2, h3 { color: #ffffff !important; letter-spacing: 2px; text-transform: uppercase; }
+			/* Section Layout */
+			section { 
+				background: transparent !important; 
+				border: none !important; 
+				padding: 100px 0 !important; /* Ensures space for the fixed nav */
+			}
+			.inner { max-width: 900px !important; margin: 0 auto !important; padding: 0 2em !important; }
 			
-			/* Links & Icons */
-			.top-links a { font-size: 1.8em; margin-right: 25px; color: #fff !important; transition: 0.3s; }
-			.top-links a:hover { opacity: 0.6; }
-			.exp-item, .project-item { margin-bottom: 4em; border-left: 1px solid #333; padding-left: 2em; }
+			h1 { font-size: 3.5em; margin-bottom: 0.2em; color: #fff !important; }
+			h2 { font-size: 1.8em; margin-bottom: 1.5em; color: #fff !important; border-bottom: 1px solid #333; padding-bottom: 0.5em; }
+			
+			/* Icon Links */
+			.top-links a { font-size: 1.8em; margin-right: 25px; color: #fff !important; text-decoration: none; }
+			
+			/* Content Items */
+			.item { margin-bottom: 4em; border-left: 2px solid #222; padding-left: 2em; transition: 0.3s; }
+			.item:hover { border-left-color: #fff; }
+			.item h3 { font-size: 1.3em; margin-bottom: 0.5em; color: #fff !important; }
+			em { color: #888; font-style: normal; display: block; margin-bottom: 1em; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -51,63 +65,63 @@
 
 		<div id="wrapper">
 
-			<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<section id="intro">
 				<div class="inner">
-					<h1 style="font-size: 3.5em; margin-bottom: 0.1em;">JAHANVI JESWANI</h1>
-					<p style="font-size: 1.5em; color: #888; margin-bottom: 0.5em;">AI/ML Engineer | Seattle, WA</p>
+					<h1>JAHANVI JESWANI</h1>
+					<p style="font-size: 1.4em; color: #888; margin-top: 0;">AI/ML Engineer | Seattle, WA</p>
 					
-					<div class="top-links" style="margin-bottom: 2em;">
+					<div class="top-links" style="margin: 2em 0;">
 						<a href="https://github.com/jahanvi-j" class="icon brands fa-github"></a>
 						<a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in"></a>
 						<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope"></a>
 					</div>
 
-					<p style="font-size: 1.2em; max-width: 850px; line-height: 1.8;">
-						I am a Graduate Data Science student at the University of Washington (3.90 GPA) specializing in scalable machine learning and agentic AI systems. 
-						With a professional background at <strong>HP Inc.</strong> and <strong>Groww</strong>, I have engineered predictive pipelines processing billions of telemetry events and deployed real-time propensity models reaching millions of users. 
-						My work focuses on bridging the gap between high-dimensional statistical theory and production-grade AI reliability.
+					<p style="font-size: 1.15em; line-height: 1.8; max-width: 800px;">
+						Graduate Data Science student at the University of Washington with a 3.90 GPA. 
+						Specializing in scalable machine learning and agentic AI systems, with a professional background in architecting predictive pipelines at <strong>HP Inc.</strong> and <strong>Groww</strong>. 
+						Experienced in processing billions of telemetry events and deploying real-time models that drive product adoption and operational efficiency.
 					</p>
 				</div>
 			</section>
 
-			<section id="experience" class="wrapper style2">
+			<section id="experience">
 				<div class="inner">
-					<h2 style="margin-bottom: 2em; border-bottom: 1px solid #222; padding-bottom: 0.5em;">Experience</h2>
-					<div class="exp-item">
+					<h2>Experience</h2>
+					<div class="item">
 						<h3>Data Scientist | HP Inc.</h3>
-						<p><em>March 2023 - August 2025</em></p>
-						<p>Designed end-to-end predictive ML pipelines for CLV models on billions of telemetry events, reducing runtime by 40%. Built a custom Go-To-Market dashboard and compensation simulator served via Databricks REST APIs.</p>
+						<em>March 2023 - August 2025</em>
+						<p>Developed end-to-end predictive ML inference pipelines for CLV models on billions of events, reducing runtime by 40%. Created a GTM dashboard and compensation simulator using Databricks REST APIs.</p>
 					</div>
-					<div class="exp-item">
+					<div class="item">
 						<h3>Machine Learning Engineer-1 | Groww</h3>
-						<p><em>June 2022 - February 2023</em></p>
-						<p>Deployed real-time XGBoost propensity models with 82% precision, boosting product adoption by 6-8% QoQ. Utilized BERT for sentiment analysis on app reviews to drive product roadmap improvements.</p>
+						<em>June 2022 - February 2023</em>
+						<p>Deployed real-time XGBoost propensity models with 82% precision. Utilized BERT for sentiment analysis and text mining on app reviews to identify product pain points.</p>
 					</div>
 				</div>
 			</section>
 
-			<section id="projects" class="wrapper style3">
+			<section id="projects">
 				<div class="inner">
-					<h2 style="margin-bottom: 2em; border-bottom: 1px solid #222; padding-bottom: 0.5em;">Projects & Publications</h2>
-					<div class="project-item">
+					<h2>Projects & Publications</h2>
+					<div class="item">
 						<h3>Agentic Customer Service Analyst</h3>
-						<p>Implemented a "Plan-as-Code" pattern using LangChain and GPT-4o to automate retail workflows through model-generated code execution in secure sandboxes.</p>
+						<p>Built an AI agent using LangChain and GPT-4o with a "Plan-as-Code" pattern for automated retail workflows.</p>
 					</div>
-					<div class="project-item">
+					<div class="item">
 						<h3>EEG Biometric Authentication (Research)</h3>
-						<p>Architected an EEG-based authentication pipeline using Bayesian optimization, achieving 81% accuracy. Research published in <em>Caring is Sharing</em>, 2023.</p>
-						<a href="https://ebooks.iospress.nl/doi/10.3233/SHTI1230114" target="_blank" style="text-decoration: underline; color: #fff;">View Publication</a>
+						<p>Architected an EEG authentication pipeline achieving 81% accuracy. Published in <em>Caring is Sharing</em>, 2023.</p>
+						<a href="https://ebooks.iospress.nl/doi/10.3233/SHTI1230114" target="_blank" style="color: #fff; text-decoration: underline;">View Publication</a>
 					</div>
 				</div>
 			</section>
 
-			<section id="contact" class="wrapper style1">
+			<section id="contact">
 				<div class="inner" style="text-align: center;">
 					<h2>Get In Touch</h2>
-					<div style="margin-top: 2em;">
-						<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope" style="margin: 0 15px;"> jjeswani@uw.edu</a>
-						<a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in" style="margin: 0 15px;"> LinkedIn</a>
-						<a href="https://github.com/jahanvi-j" class="icon brands fa-github" style="margin: 0 15px;"> GitHub</a>
+					<div style="margin-top: 3em;">
+						<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope" style="margin: 0 20px;"> jjeswani@uw.edu</a>
+						<a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in" style="margin: 0 20px;"> LinkedIn</a>
+						<a href="https://github.com/jahanvi-j" class="icon brands fa-github" style="margin: 0 20px;"> GitHub</a>
 					</div>
 				</div>
 			</section>
@@ -119,7 +133,7 @@
 		<script src="assets/js/main.js"></script>
 		<script>
 			$(document).ready(function() {
-				$('#nav-bar a').scrolly({ speed: 800, offset: 60 });
+				$('#nav-bar a').scrolly({ speed: 800, offset: 50 });
 			});
 		</script>
 	</body>
