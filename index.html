@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Global Background with Finer "Web" Lines */
+			/* Global Web-Style Background */
 			html, body, #wrapper { 
 				background-color: #000000 !important; 
 				background-image: 
@@ -23,36 +23,38 @@
 			}
 			#nav-bar a { color: #888; text-decoration: none; margin: 0 20px; font-size: 0.85em; letter-spacing: 2px; text-transform: uppercase; }
 
-			.inner { max-width: 1100px !important; margin: 0 auto !important; padding: 0 2em !important; }
+			.inner { max-width: 1100px !important; margin: 0 auto !important; padding: 4em 2em !important; }
 			
-			/* Flex Container for Photo and Text */
+			/* Layout for Photo on Left */
 			.intro-container {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				gap: 40px;
-				padding-top: 140px;
+				gap: 50px;
+				padding-top: 100px;
 			}
-			.intro-text { flex: 2; }
-			.intro-image { flex: 1; text-align: right; }
+			.intro-image { flex: 1; text-align: left; }
 			.intro-image img {
-				width: 300px;
-				height: 300px;
-				border-radius: 5px; /* Keeps it professional, not a circle */
-				filter: grayscale(100%); /* Fits the black theme */
+				width: 280px;
+				height: auto;
+				border-radius: 4px;
 				border: 1px solid #333;
-				object-fit: cover;
+				filter: grayscale(20%);
 			}
+			.intro-text { flex: 2.5; }
 
-			h1 { font-size: 3em; margin-bottom: 0.1em; color: #fff !important; }
+			/* Typography Updates */
+			h1 { font-size: 2.2em; margin-bottom: 0.1em; color: #fff !important; letter-spacing: 3px; }
+			h2 { font-size: 1.5em; color: #fff !important; border-bottom: 1px solid #222; padding-bottom: 0.5em; margin-bottom: 1.5em; text-transform: uppercase; }
+			
 			.top-links a { font-size: 1.5em; margin-right: 20px; color: #fff !important; }
-			
 			.item { margin-bottom: 4em; border-left: 1px solid #333; padding-left: 2em; }
-			
+			.item h3 { font-size: 1.2em; color: #fff !important; margin-bottom: 0.3em; }
+			.item em { color: #777; font-style: normal; display: block; margin-bottom: 1em; font-size: 0.9em; }
+
 			@media (max-width: 768px) {
-				.intro-container { flex-direction: column-reverse; text-align: center; }
+				.intro-container { flex-direction: column; text-align: center; }
 				.intro-image { text-align: center; }
-				.intro-image img { width: 200px; height: 200px; }
 			}
 		</style>
 	</head>
@@ -62,6 +64,7 @@
 			<a href="#intro">Overview</a>
 			<a href="#experience">Experience</a>
 			<a href="#projects">Projects</a>
+			<a href="#publication">Publication</a>
 			<a href="#contact">Contact</a>
 		</nav>
 
@@ -70,9 +73,12 @@
 			<section id="intro">
 				<div class="inner">
 					<div class="intro-container">
+						<div class="intro-image">
+							<img src="headshot.jpg" alt="Jahanvi Jeswani">
+						</div>
 						<div class="intro-text">
 							<h1>JAHANVI JESWANI</h1>
-							<p style="font-size: 1.2em; color: #888;">AI/ML Engineer | Seattle, WA</p>
+							<p style="font-size: 1.1em; color: #888; margin-top: 0;">AI/ML Engineer | Seattle, WA</p>
 							
 							<div class="top-links" style="margin: 1.5em 0;">
 								<a href="https://github.com/jahanvi-j" class="icon brands fa-github"></a>
@@ -80,22 +86,78 @@
 								<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope"></a>
 							</div>
 
-							<p style="font-size: 1.1em; line-height: 1.7;">
-								I am a Master’s in Data Science student at the University of Washington specializing in scalable machine learning and agentic AI systems. 
-								My background focuses on bridging the gap between high-dimensional statistical theory and production-grade reliability, with a proven track record of architecting end-to-end predictive pipelines at scale.
+							<p style="line-height: 1.7;">
+								I am a Master’s in Data Science student at the University of Washington specializing in scalable machine learning and agentic AI systems. My background focuses on bridging the gap between high-dimensional statistical theory and production-grade reliability, with a proven track record of architecting end-to-end predictive pipelines at scale.
 							</p>
-							<p style="font-size: 1.1em; line-height: 1.7;">
-								Previously, I worked as a Data Scientist at **HP Inc.** and a Machine Learning Engineer at **Groww**, where I engineered ML inference pipelines processing billions of telemetry events and deployed real-time propensity models reaching millions of users. 
-								My current work is focused on NLP and the development of agentic AI systems, specifically exploring model reliability and scalable document intelligence.
+							<p style="line-height: 1.7;">
+								Previously, I worked as a Data Scientist at **HP Inc.** and a Machine Learning Engineer at **Groww**, where I engineered ML inference pipelines processing billions of telemetry events and deployed real-time propensity models reaching millions of users. My current work is focused on NLP and the development of agentic AI systems, specifically exploring model reliability and scalable document intelligence.
 							</p>
-						</div>
-						<div class="intro-image">
-							<img src="images/profile.jpg" alt="Jahanvi Jeswani">
 						</div>
 					</div>
 				</div>
 			</section>
 
-			</div>
+			<section id="experience">
+				<div class="inner">
+					<h2>Work Experience</h2>
+					<div class="item">
+						<h3>Data Scientist | HP Inc.</h3>
+						<em>March 2023 - August 2025</em>
+						<p>Architected predictive ML pipelines for Customer Lifetime Value (CLV) models on billions of telemetry events, achieving a 40% reduction in runtime. Developed a custom dashboard and compensation simulator using Databricks REST APIs for strategic market insights.</p>
+					</div>
+					<div class="item">
+						<h3>Machine Learning Engineer | Groww</h3>
+						<em>June 2022 - February 2023</em>
+						<p>Deployed real-time XGBoost propensity models reaching millions of daily users with 82% precision. Implemented BERT-based sentiment analysis and text mining on user reviews to drive product feature prioritization.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="projects">
+				<div class="inner">
+					<h2>Projects</h2>
+					<div class="item">
+						<h3>Agentic Customer Service Analyst</h3>
+						<p>Developed an AI agent utilizing LangChain and GPT-4o to implement a "Plan-as-Code" pattern. The system automates retail workflows by executing model-generated code in secure sandboxed environments.</p>
+					</div>
+					<div class="item">
+						<h3>Identity Fraud Detection System</h3>
+						<p>Designed a security pipeline using YOLO and Tesseract OCR to detect fraudulent registrations via identity document analysis, achieving 78% accuracy in automated forged detail detection.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="publication">
+				<div class="inner">
+					<h2>Publication</h2>
+					<div class="item">
+						<h3>EEG-Based Biometric Authentication</h3>
+						<p>Researched and developed an authentication pipeline utilizing Low Valence Low Arousal stimuli and XGBoost-based classification with Bayesian optimization. Achieving 81% multiclass accuracy, this work was presented at the MIE 2023 conference.</p>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/37203658/" target="_blank" style="color: #fff; text-decoration: underline;">View on PubMed</a>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact">
+				<div class="inner" style="text-align: center; padding-bottom: 8em;">
+					<h2>Get In Touch</h2>
+					<div style="margin-top: 2em;">
+						<a href="mailto:jjeswani@uw.edu" style="margin: 0 20px; color: #fff;">Email</a>
+						<a href="https://linkedin.com/in/jahanvijeswani" style="margin: 0 20px; color: #fff;">LinkedIn</a>
+						<a href="https://github.com/jahanvi-j" style="margin: 0 20px; color: #fff;">GitHub</a>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#nav-bar a').scrolly({ speed: 800, offset: 50 });
+			});
+		</script>
 	</body>
 </html>
