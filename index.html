@@ -1,202 +1,245 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Jahanvi Jeswani | AI/ML Engineer</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		<link rel="icon" type="image/png" href="images/logo.png">
-		
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Subtle Slate Grid - Professional and Low-Contrast */
-			html, body, #wrapper { 
-				background-color: #000000 !important; 
-				background-image: 
-					linear-gradient(rgba(100, 110, 140, 0.07) 1px, transparent 1px),
-					linear-gradient(90deg, rgba(100, 110, 140, 0.07) 1px, transparent 1px) !important;
-				background-size: 45px 45px !important;
-				color: #d1d1d1 !important;
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jahanvi Jeswani — AI/ML Engineer</title>
+  <meta name="description" content="Jahanvi Jeswani — MS Data Science at the University of Washington. Applied ML and agentic AI systems that ship." />
+  <link rel="icon" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="brand">jj<span>.</span></a>
+    <nav>
+      <a href="#work">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <span class="sun">☀</span><span class="moon">☾</span>
+    </button>
+  </header>
 
-			/* Navigation Bar */
-			#nav-bar {
-				position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.95);
-				z-index: 10000; border-bottom: 1px solid #222; text-align: center; padding: 12px 0;
-			}
-			#nav-bar a { color: #888; text-decoration: none; margin: 0 15px; font-size: 0.8em; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; }
-			#nav-bar a:hover { color: #fff; }
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text reveal">
+        <p class="eyebrow"><span class="dot"></span>Open to AI/ML roles &amp; internships</p>
+        <h1>Hi, I'm Jahanvi.<br />I build <em class="marker">applied AI</em> that ships.</h1>
+        <p class="lede">
+          MS Data Science student at the University of Washington. Previously a Data Scientist at
+          <strong>HP</strong> and ML Engineer at <strong>Groww</strong>, building ML pipelines on billions
+          of events. These days I work on agentic systems, LLM evaluation, and NLP.
+        </p>
+        <p class="typed mono">&gt; currently <span id="typed">building multi-agent systems</span><span class="caret">_</span></p>
+        <div class="cta">
+          <a class="btn primary" href="images/Jahanvi_Jeswani_Resume_ML.pdf" target="_blank" rel="noopener">Resume ↗</a>
+          <a class="btn" href="mailto:jjeswani@uw.edu">Email</a>
+          <a class="btn ghost" href="https://github.com/jahanvi-j" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://linkedin.com/in/jahanvijeswani" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-photo reveal">
+        <div class="photo-frame">
+          <img src="images/headshot.png" alt="Portrait of Jahanvi Jeswani" />
+        </div>
+        <span class="sticker s1">MSDS @ UW</span>
+        <span class="sticker s2">Seattle, WA</span>
+      </div>
+    </section>
 
-			/* Reduced Section Gaps */
-			.inner { max-width: 1100px !important; margin: 0 auto !important; padding: 3.5em 2em !important; }
-			
-			/* Intro Section Layout */
-			.intro-container {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				gap: 50px;
-				padding-top: 80px; /* Reduced top padding */
-			}
-			.intro-text { flex: 2; }
-			.intro-image { flex: 1.1; text-align: right; }
-			.intro-image img {
-				width: 100%;
-				max-width: 400px;
-				height: auto;
-				border-radius: 25px;
-				border: 1px solid #333;
-				filter: grayscale(10%);
-				box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-			}
+    <!-- Stats -->
+    <section class="stats reveal">
+      <div><b>1M+</b><span>subscriptions driven by an HP propensity model</span></div>
+      <div><b>40%</b><span>faster PySpark pipelines on billions of events</span></div>
+      <div><b>3×</b><span>hackathon / datathon 1st-place &amp; finalist wins</span></div>
+      <div><b>3.90</b><span>GPA, MS Data Science at UW</span></div>
+    </section>
 
-			/* Typography & Content Items */
-			h1 { font-size: 2.1em; margin-bottom: 0.1em; color: #fff !important; letter-spacing: 2px; }
-			h2 { font-size: 1.35em; color: #fff !important; border-bottom: 1px solid #222; padding-bottom: 0.4em; margin-bottom: 1.2em; text-transform: uppercase; }
-			
-			.item { margin-bottom: 3em; border-left: 2px solid #222; padding-left: 1.8em; }
-			.item:hover { border-left-color: #444; }
-			.item h3 { font-size: 1.15em; color: #fff !important; margin-bottom: 0.2em; }
-			.item em { color: #777; font-style: normal; display: block; margin-bottom: 0.8em; font-size: 0.85em; }
+    <!-- Experience -->
+    <section id="work" class="section">
+      <h2 class="section-title reveal"><span class="num">01</span>Experience</h2>
+      <ol class="timeline">
+        <li class="reveal">
+          <div class="when mono">Sep 2025 — Mar 2027</div>
+          <div class="what">
+            <h3>University of Washington <span>· MS, Data Science</span></h3>
+            <p>Machine Learning, NLP, Deep Learning, Applied Statistics, Scalable Systems, Explainable AI.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="when mono">Apr 2023 — Aug 2025</div>
+          <div class="what">
+            <h3>HP Inc. <span>· Data Scientist</span></h3>
+            <ul>
+              <li>Built a natural-language-to-dashboard system with Llama 3 and schema-aware few-shot prompting for self-serve data exploration.</li>
+              <li>Scaled CLV and churn inference (Cox PH, CatBoost) over billions of telemetry events; cut PySpark runtime by 40%.</li>
+              <li>Shipped a revenue forecasting model (R² = 0.80) with Databricks + MLflow retraining and a SHAP-powered simulator.</li>
+              <li>XGBoost propensity model for HP iPaper: 1M+ subscriptions in a year and 50% lower marketing cost.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="when mono">Jan 2022 — Mar 2023</div>
+          <div class="what">
+            <h3>Groww <span>· ML Engineer I &amp; ML Intern</span></h3>
+            <ul>
+              <li>Propensity model on millions of clickstream events lifted Fixed Deposit adoption 6–8% QoQ.</li>
+              <li>Clustered BERT embeddings of reviews and surveys to surface user pain points for Mutual Funds.</li>
+              <li>YOLO + OCR pipeline for KYC documents (78% precision), clearing a 3-month backlog.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="when mono">Aug 2018 — May 2022</div>
+          <div class="what">
+            <h3>SGSITS Indore <span>· B.Tech, Electronics &amp; Instrumentation</span></h3>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-			/* Skills Layout */
-			.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; }
-			.skill-cat h4 { color: #fff; font-size: 0.85em; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #222; display: inline-block; padding-bottom: 2px; }
-			.skill-cat p { font-size: 0.9em; color: #999; line-height: 1.6; }
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2 class="section-title reveal"><span class="num">02</span>Selected projects</h2>
+      <div class="grid">
+        <article class="card reveal">
+          <div class="card-top"><span class="idx mono">01</span><span class="badge">Live</span></div>
+          <h3>LectureAI</h3>
+          <p>Turns any YouTube lecture into a study environment: outlines, multi-depth summaries, flashcards, semantic search, and faculty audit reports via a five-agent pipeline.</p>
+          <ul class="tags"><li>Next.js</li><li>FastAPI</li><li>Gemini</li><li>Embeddings</li></ul>
+          <div class="links">
+            <a href="https://lecture-ai-six.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+            <a href="https://github.com/jahanvi-j/lecture-ai" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
 
-			@media (max-width: 980px) {
-				.intro-container { flex-direction: column-reverse; text-align: center; }
-				.intro-image { text-align: center; margin-bottom: 2em; }
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+        <article class="card reveal">
+          <div class="card-top"><span class="idx mono">02</span><span class="badge gold">1st Place · UW Datathon 2026</span></div>
+          <h3>AccessLens</h3>
+          <p>Chrome extension that detects web accessibility issues in real time: XGBoost severity classification (0.85 F1), SHAP explanations, and GPT-4o fix suggestions.</p>
+          <ul class="tags"><li>XGBoost</li><li>SHAP</li><li>GPT-4o</li><li>FastAPI</li><li>JavaScript</li></ul>
+          <div class="links">
+            <a href="https://github.com/jahanvi-j/TheGoldDiggers" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
 
-		<nav id="nav-bar">
-			<a href="#intro">Overview</a>
-			<a href="#experience">Experience</a>
-			<a href="#projects">Projects</a>
-			<a href="#publication">Publication</a>
-			<a href="#skills">Skills</a>
-			<a href="images/Jahanvi_Jeswani_Resume_ML.pdf" target="_blank">Resume</a>
-		</nav>
+        <article class="card reveal">
+          <div class="card-top"><span class="idx mono">03</span><span class="badge">LA Hacks 2026</span></div>
+          <h3>MultiEval</h3>
+          <p>Evaluation platform for multi-agent orchestration: six pluggable harnesses, batch runs, A/B comparison with statistical tests, an evolve-harness loop, and a trace viewer.</p>
+          <ul class="tags"><li>Python</li><li>OpenHands</li><li>Inspect AI</li><li>Agents</li></ul>
+          <div class="links">
+            <a href="https://github.com/jahanvi-j/multieval" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
 
-		<div id="wrapper">
+        <article class="card reveal">
+          <div class="card-top"><span class="idx mono">04</span><span class="badge">Research</span></div>
+          <h3>ValueActionLens Reproduction</h3>
+          <p>Reproduced EMNLP 2025 "Mind the Value-Action Gap" on GPT-4o-mini and Gemma-2-9B: ~60% alignment across 14.8k scenarios and 12 cultures.</p>
+          <ul class="tags"><li>LLM Eval</li><li>HuggingFace</li><li>OpenAI API</li></ul>
+          <div class="links">
+            <a href="https://github.com/jahanvi-j/value_action_gap" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
 
-			<section id="intro">
-				<div class="inner">
-					<div class="intro-container">
-						<div class="intro-text">
-							<h1>JAHANVI JESWANI</h1>
-							<p style="font-size: 1.1em; color: #888; margin-top: 0;">AI/ML Engineer | Seattle, WA</p>
-							
-							<div style="margin: 1.5em 0;">
-								<a href="https://github.com/jahanvi-j" class="icon brands fa-github" style="font-size: 1.5em; margin-right: 20px; color: #fff;"></a>
-								<a href="https://linkedin.com/in/jahanvijeswani" class="icon brands fa-linkedin-in" style="font-size: 1.5em; margin-right: 20px; color: #fff;"></a>
-								<a href="mailto:jjeswani@uw.edu" class="icon solid fa-envelope" style="font-size: 1.5em; color: #fff;"></a>
-							</div>
+        <article class="card reveal">
+          <div class="card-top"><span class="idx mono">05</span><span class="badge">Agent</span></div>
+          <h3>Agentic Customer Service</h3>
+          <p>GPT-4o agent that plans in code for returns, order validation, and inventory checks, running model-generated code against live inventory and transaction tables.</p>
+          <ul class="tags"><li>LangChain</li><li>GPT-4o</li><li>Tool calling</li></ul>
+          <div class="links">
+            <a href="https://github.com/jahanvi-j/Agentic-Customer-Support" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
 
-							<p style="line-height: 1.7; font-size: 1.05em;">
-								I am a Master’s in Data Science student at the University of Washington specializing in scalable machine learning and agentic AI systems. My background focuses on bridging the gap between high-dimensional statistical theory and production-grade reliability, with a proven track record of architecting end-to-end predictive pipelines at scale.
-							</p>
-							<p style="line-height: 1.7; font-size: 1.05em;">
-								Previously, I worked as a Data Scientist at HP Inc. and a Machine Learning Engineer at Groww, where I engineered ML inference pipelines processing billions of clickstream events, deployed real-time propensity models, and derived insights that guided marketing and retention strategies. My current work is focused on NLP and the development of agentic AI systems, specifically exploring model reliability and scalable document intelligence.
-							</p>
-						</div>
-						<div class="intro-image">
-							<img src="images/headshot.png" alt="Jahanvi Jeswani Profile">
-						</div>
-					</div>
-				</div>
-			</section>
+        <article class="card reveal">
+          <div class="card-top"><span class="idx mono">06</span><span class="badge">Live</span></div>
+          <h3>Words Across Borders</h3>
+          <p>Interactive dashboard that extends Google Ngrams with translations and synonyms to compare how word usage changes over time across languages.</p>
+          <ul class="tags"><li>Streamlit</li><li>Data Viz</li><li>APIs</li></ul>
+          <div class="links">
+            <a href="https://words-across-borders.streamlit.app/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a href="https://github.com/jahanvi-j/GoogleNGrams_CrossLangViz" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
+      </div>
 
-			<section id="experience">
-				<div class="inner">
-					<h2>Work Experience</h2>
-					<div class="item">
-						<h3>Data Scientist | HP Inc.</h3>
-						<em>March 2023 - August 2025</em>
-						<p>Architected predictive ML pipelines for CLV models on billions of telemetry events. Developed a custom dashboard and compensation simulator via Databricks REST APIs.</p>
-					</div>
-					<div class="item">
-						<h3>Machine Learning Engineer | Groww</h3>
-						<em>June 2022 - February 2023</em>
-						<p>Implemented BERT-based sentiment analysis on user reviews to drive product prioritization. Implemented prediction models to improve recommendation systems.</p>
-					</div>
-				</div>
-			</section>
+      <h3 class="subhead reveal">Earlier builds</h3>
+      <ul class="mini reveal">
+        <li><div><a href="https://github.com/jahanvi-j/Object_Measurement" target="_blank" rel="noopener">Object Measurement</a></div><span>Measures object dimensions from images with OpenCV contours.</span><em class="mono">Python · OpenCV</em></li>
+        <li><div><a href="https://github.com/jahanvi-j/BarcodeGenerator" target="_blank" rel="noopener">Barcode Generator</a></div><span>Desktop app for custom barcodes with templates, text, and images.</span><em class="mono">Python · Tkinter</em></li>
+        <li><div><a href="https://github.com/jahanvi-j/NotesApp-React" target="_blank" rel="noopener">Notes App</a> <a class="live" href="https://jahanvi-j.github.io/NotesApp-React" target="_blank" rel="noopener">live ↗</a></div><span>A simple notes app built with React.</span><em class="mono">React</em></li>
+      </ul>
+    </section>
 
-			<section id="projects">
-				<div class="inner">
-					<h2>Projects</h2>
-					<div class="item">
-						<h3>Agentic Customer Service Analyst</h3>
-						<p>Developed an AI agent utilizing LangChain and GPT-4o to implement a "Plan-as-Code" pattern. Automates retail workflows via model-generated code execution in secure sandboxes.</p>
-					</div>
-					<div class="item">
-						<h3>Identity Fraud Detection System</h3>
-						<p>Designed a pipeline using YOLO and Tesseract OCR to detect fraudulent identity documents and flag user accounts.</p>
-					</div>
-				</div>
-			</section>
+    <!-- Research & awards -->
+    <section id="research" class="section">
+      <h2 class="section-title reveal"><span class="num">03</span>Research &amp; awards</h2>
+      <div class="two-col">
+        <a class="pub reveal" href="https://pubmed.ncbi.nlm.nih.gov/37203658/" target="_blank" rel="noopener">
+          <span class="mono label">Publication · IOS Press, 2023</span>
+          <h3>Low Valence Low Arousal Stimuli for EEG-Based Biometric Authentication</h3>
+          <p>J. Jeswani, et al. Presented at Medical Informatics Europe (MIE) 2023. <u>View on PubMed ↗</u></p>
+        </a>
+        <ul class="awards reveal">
+          <li><span class="trophy">★</span>1st Place, Databricks × UW Hackathon</li>
+          <li><span class="trophy">★</span>1st Place, UW Datathon 2026 (Technology Access Track)</li>
+          <li><span class="trophy">★</span>National Finalist, Philips Code to Care Challenge S2 (top 8 in India)</li>
+        </ul>
+      </div>
+    </section>
 
-			<section id="publication">
-				<div class="inner">
-					<h2>Publication</h2>
-					<div class="item">
-						<h3>EEG-Based Biometric Authentication</h3>
-						<p>Developed an authentication pipeline utilizing Low Valence Low Arousal stimuli and XGBoost with Bayesian optimization. Presented at Medical Informatics Europe Conference (MIE), 2023.</p>
-						<a href="https://pubmed.ncbi.nlm.nih.gov/37203658/" target="_blank" style="color: #fff; text-decoration: underline;">View on PubMed</a>
-					</div>
-				</div>
-			</section>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2 class="section-title reveal"><span class="num">04</span>Toolkit</h2>
+      <div class="skills reveal">
+        <div><h4 class="mono">Languages</h4><p>Python · SQL · PySpark · R · C++</p></div>
+        <div><h4 class="mono">ML</h4><p>PyTorch · TensorFlow · scikit-learn · XGBoost · HuggingFace · Keras</p></div>
+        <div><h4 class="mono">GenAI &amp; LLMs</h4><p>LangChain · RAG · Embeddings · Vector search · Tool calling · Agents</p></div>
+        <div><h4 class="mono">MLOps &amp; Cloud</h4><p>MLflow · Databricks · Docker · CI/CD · AWS · Azure · GCP</p></div>
+      </div>
+    </section>
 
-			<section id="skills">
-				<div class="inner">
-					<h2>Technical Skills</h2>
-					<div class="skills-grid">
-						<div class="skill-cat">
-							<h4>Languages</h4>
-							<p>Python, SQL, PySpark, R, C++, MATLAB</p>
-						</div>
-						<div class="skill-cat">
-							<h4>ML & AI</h4>
-							<p>PyTorch, TensorFlow, Scikit-learn, LangChain, Transformers, XGBoost, Bayesian Optimization</p>
-						</div>
-						<div class="skill-cat">
-							<h4>Data & Cloud</h4>
-							<p>PySpark, Databricks, AWS (S3, EC2), Azure, Snowflake, ETL Pipelines</p>
-						</div>
-						<div class="skill-cat">
-							<h4>Tools</h4>
-							<p>Docker, Kubernetes, Git, MLflow, Airflow, Tableau, PowerBI, Flask/FastAPI</p>
-						</div>
-					</div>
-				</div>
-			</section>
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="track mono">
+        <span>agents</span><i>✦</i><span>LLM evaluation</span><i>✦</i><span>NLP</span><i>✦</i><span>RAG</span><i>✦</i><span>explainable AI</span><i>✦</i><span>ML at scale</span><i>✦</i>
+        <span>agents</span><i>✦</i><span>LLM evaluation</span><i>✦</i><span>NLP</span><i>✦</i><span>RAG</span><i>✦</i><span>explainable AI</span><i>✦</i><span>ML at scale</span><i>✦</i>
+      </div>
+    </div>
 
-			<section id="contact">
-				<div class="inner" style="text-align: center; padding-bottom: 6em;">
-					<hr style="border: 0; border-top: 1px solid #1a1a1a; margin-bottom: 3.5em;">
-					<h2>Get In Touch</h2>
-					<div style="margin-top: 2em;">
-						<a href="mailto:jjeswani@uw.edu" style="margin: 0 20px; color: #fff; text-decoration: none;">Email</a>
-						<a href="https://linkedin.com/in/jahanvijeswani" style="margin: 0 20px; color: #fff; text-decoration: none;">LinkedIn</a>
-						<a href="https://github.com/jahanvi-j" style="margin: 0 20px; color: #fff; text-decoration: none;">GitHub</a>
-					</div>
-				</div>
-			</section>
+    <!-- Contact -->
+    <section id="contact" class="section contact reveal">
+      <h2>Let's build something <em class="marker">useful</em>.</h2>
+      <p>I'm always happy to chat about ML, agents, or interesting problems.</p>
+      <a class="big-mail" href="mailto:jjeswani@uw.edu">jjeswani@uw.edu</a>
+      <div class="cta center">
+        <a class="btn ghost" href="https://linkedin.com/in/jahanvijeswani" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/jahanvi-j" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="images/Jahanvi_Jeswani_Resume_ML.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </section>
+  </main>
 
-		</div>
+  <footer class="footer mono">
+    <span>© <span id="year"></span> Jahanvi Jeswani</span>
+    <span>Designed &amp; built in Seattle</span>
+  </footer>
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('#nav-bar a').scrolly({ speed: 800, offset: 50 });
-			});
-		</script>
-	</body>
+  <script src="script.js"></script>
+</body>
 </html>
-
