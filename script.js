@@ -32,6 +32,21 @@
     "studying at UW, Seattle",
     "turning data into decisions"
   ];
+  var hacks = ["UW Datathon", "LA Hacks", "Databricks × UW", "Philips Code to Care"];
+  var hackEl = document.getElementById("hackName"), h = 0;
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    setInterval(function () {
+      hackEl.classList.add("out");
+      setTimeout(function () {
+        h = (h + 1) % hacks.length;
+        hackEl.textContent = hacks[h];
+        hackEl.classList.remove("out");
+      }, 300);
+    }, 2000);
+  } else {
+    hackEl.textContent = hacks.join(" · ");
+  }
+
   var el = document.getElementById("typed");
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   var p = 0, i = phrases[0].length, deleting = true;
