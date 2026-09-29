@@ -21,9 +21,9 @@
   <header class="nav">
     <a href="#top" class="brand">jj<span>.</span></a>
     <nav>
-      <a href="#work">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#research">Research</a>
+      <a href="#work">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -36,12 +36,11 @@
     <!-- Hero -->
     <section class="hero">
       <div class="hero-text reveal">
-        <p class="eyebrow"><span class="dot"></span>Open to AI/ML roles &amp; internships</p>
         <h1>Hi, I'm Jahanvi.<br />I build <em class="marker">applied AI</em> that ships.</h1>
         <p class="lede">
-          MS Data Science student at the University of Washington. Previously a Data Scientist at
-          <strong>HP</strong> and ML Engineer at <strong>Groww</strong>, building ML pipelines on billions
-          of events. These days I work on agentic systems, LLM evaluation, and NLP.
+          MS Data Science student at the University of Washington. SDE-AI Engineer Intern at
+          <strong>Coupang</strong>, previously a Data Scientist at <strong>HP</strong> and ML Engineer at
+          <strong>Groww</strong>, building ML systems on billions of events. These days I work on agentic systems, LLM evaluation, and NLP.
         </p>
         <p class="typed mono">&gt; currently <span id="typed">building multi-agent systems</span><span class="caret">_</span></p>
         <div class="cta">
@@ -60,65 +59,26 @@
       </div>
     </section>
 
-    <!-- Stats -->
-    <section class="stats reveal">
-      <div><b>1M+</b><span>subscriptions driven by an HP propensity model</span></div>
-      <div><b>40%</b><span>faster PySpark pipelines on billions of events</span></div>
-      <div><b>3×</b><span>hackathon / datathon 1st-place &amp; finalist wins</span></div>
-      <div><b>3.90</b><span>GPA, MS Data Science at UW</span></div>
+    <!-- Wins -->
+    <section class="wins reveal">
+      <div class="wins-count"><b>4×</b><span>hackathon winner</span></div>
+      <ul>
+        <li><span class="mono">01</span>UW Datathon 2026<em>1st Place</em></li>
+        <li><span class="mono">02</span>LA Hacks 2026<em>2nd Place · Cognition Track</em></li>
+        <li><span class="mono">03</span>Databricks × UW Hackathon<em>1st Place</em></li>
+        <li><span class="mono">04</span>Philips Code to Care<em>National Finalist</em></li>
+      </ul>
     </section>
 
-    <!-- Experience -->
-    <section id="work" class="section">
-      <h2 class="section-title reveal"><span class="num">01</span>Experience</h2>
-      <ol class="timeline">
-        <li class="reveal">
-          <div class="when mono">Sep 2025 — Mar 2027</div>
-          <div class="what">
-            <h3>University of Washington <span>· MS, Data Science</span></h3>
-            <p>Machine Learning, NLP, Deep Learning, Applied Statistics, Scalable Systems, Explainable AI.</p>
-          </div>
-        </li>
-        <li class="reveal">
-          <div class="when mono">Apr 2023 — Aug 2025</div>
-          <div class="what">
-            <h3>HP Inc. <span>· Data Scientist</span></h3>
-            <ul>
-              <li>Built a natural-language-to-dashboard system with Llama 3 and schema-aware few-shot prompting for self-serve data exploration.</li>
-              <li>Scaled CLV and churn inference (Cox PH, CatBoost) over billions of telemetry events; cut PySpark runtime by 40%.</li>
-              <li>Shipped a revenue forecasting model (R² = 0.80) with Databricks + MLflow retraining and a SHAP-powered simulator.</li>
-              <li>XGBoost propensity model for HP iPaper: 1M+ subscriptions in a year and 50% lower marketing cost.</li>
-            </ul>
-          </div>
-        </li>
-        <li class="reveal">
-          <div class="when mono">Jan 2022 — Mar 2023</div>
-          <div class="what">
-            <h3>Groww <span>· ML Engineer I &amp; ML Intern</span></h3>
-            <ul>
-              <li>Propensity model on millions of clickstream events lifted Fixed Deposit adoption 6–8% QoQ.</li>
-              <li>Clustered BERT embeddings of reviews and surveys to surface user pain points for Mutual Funds.</li>
-              <li>YOLO + OCR pipeline for KYC documents (78% precision), clearing a 3-month backlog.</li>
-            </ul>
-          </div>
-        </li>
-        <li class="reveal">
-          <div class="when mono">Aug 2018 — May 2022</div>
-          <div class="what">
-            <h3>SGSITS Indore <span>· B.Tech, Electronics &amp; Instrumentation</span></h3>
-          </div>
-        </li>
-      </ol>
-    </section>
 
     <!-- Projects -->
     <section id="projects" class="section">
-      <h2 class="section-title reveal"><span class="num">02</span>Selected projects</h2>
+      <h2 class="section-title reveal"><span class="num">01</span>Selected projects</h2>
       <div class="grid">
         <article class="card reveal">
           <div class="card-top"><span class="idx mono">01</span><span class="badge">Live</span></div>
           <h3>LectureAI</h3>
-          <p>Turns any YouTube lecture into a study environment: outlines, multi-depth summaries, flashcards, semantic search, and faculty audit reports via a five-agent pipeline.</p>
+          <p>Turns any YouTube lecture into a study environment: outlines, multi-depth summaries, flashcards, semantic search, and faculty audit reports via a six-agent pipeline with SSE streaming.</p>
           <ul class="tags"><li>Next.js</li><li>FastAPI</li><li>Gemini</li><li>Embeddings</li></ul>
           <div class="links">
             <a href="https://lecture-ai-six.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
@@ -137,11 +97,12 @@
         </article>
 
         <article class="card reveal">
-          <div class="card-top"><span class="idx mono">03</span><span class="badge">LA Hacks 2026</span></div>
+          <div class="card-top"><span class="idx mono">03</span><span class="badge gold">2nd Place · LA Hacks 2026</span></div>
           <h3>MultiEval</h3>
-          <p>Evaluation platform for multi-agent orchestration: six pluggable harnesses, batch runs, A/B comparison with statistical tests, an evolve-harness loop, and a trace viewer.</p>
+          <p>Evaluation platform for multi-agent orchestration: six pluggable harnesses, batch runs, A/B comparison with statistical tests, and a Gantt + causal-graph trace viewer. Won the Cognition track.</p>
           <ul class="tags"><li>Python</li><li>OpenHands</li><li>Inspect AI</li><li>Agents</li></ul>
           <div class="links">
+            <a href="https://devpost.com/software/multival" target="_blank" rel="noopener">Devpost ↗</a>
             <a href="https://github.com/jahanvi-j/multieval" target="_blank" rel="noopener">Code ↗</a>
           </div>
         </article>
@@ -149,8 +110,8 @@
         <article class="card reveal">
           <div class="card-top"><span class="idx mono">04</span><span class="badge">Research</span></div>
           <h3>ValueActionLens Reproduction</h3>
-          <p>Reproduced EMNLP 2025 "Mind the Value-Action Gap" on GPT-4o-mini and Gemma-2-9B: ~60% alignment across 14.8k scenarios and 12 cultures.</p>
-          <ul class="tags"><li>LLM Eval</li><li>HuggingFace</li><li>OpenAI API</li></ul>
+          <p>Reproduced EMNLP 2025 "Mind the Value-Action Gap" on GPT-4o-mini and Gemma-2-9B: 14.8k scenarios across 12 cultures, then improved alignment with LoRA fine-tuning (SFT + DPO).</p>
+          <ul class="tags"><li>LLM Eval</li><li>HuggingFace</li><li>LoRA</li><li>DPO</li></ul>
           <div class="links">
             <a href="https://github.com/jahanvi-j/value_action_gap" target="_blank" rel="noopener">Code ↗</a>
           </div>
@@ -176,6 +137,15 @@
             <a href="https://github.com/jahanvi-j/GoogleNGrams_CrossLangViz" target="_blank" rel="noopener">Code ↗</a>
           </div>
         </article>
+        <article class="card reveal">
+          <div class="card-top"><span class="idx mono">07</span><span class="badge">Published · MIE 2023</span></div>
+          <h3>EEG Biometric Authentication</h3>
+          <p>Research under Dr. AR Jac Fredo at IIT (BHU). Authenticated people from EEG signals in the DEAP dataset, reaching 82% accuracy with stimulus-based segmentation, feature engineering, and leave-one-out validation.</p>
+          <ul class="tags"><li>Python</li><li>MATLAB</li><li>Signal processing</li><li>ML</li></ul>
+          <div class="links">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37203658/" target="_blank" rel="noopener">Paper ↗</a>
+          </div>
+        </article>
       </div>
 
       <h3 class="subhead reveal">Earlier builds</h3>
@@ -188,7 +158,7 @@
 
     <!-- Research & awards -->
     <section id="research" class="section">
-      <h2 class="section-title reveal"><span class="num">03</span>Research &amp; awards</h2>
+      <h2 class="section-title reveal"><span class="num">02</span>Research &amp; awards</h2>
       <div class="two-col">
         <a class="pub reveal" href="https://pubmed.ncbi.nlm.nih.gov/37203658/" target="_blank" rel="noopener">
           <span class="mono label">Publication · IOS Press, 2023</span>
@@ -198,19 +168,76 @@
         <ul class="awards reveal">
           <li><span class="trophy">★</span>1st Place, Databricks × UW Hackathon</li>
           <li><span class="trophy">★</span>1st Place, UW Datathon 2026 (Technology Access Track)</li>
+          <li><span class="trophy">★</span>2nd Place, LA Hacks 2026, and winner of the Cognition track</li>
           <li><span class="trophy">★</span>National Finalist, Philips Code to Care Challenge S2 (top 8 in India)</li>
         </ul>
       </div>
+    </section>
+
+    <div class="marquee reverse" aria-hidden="true">
+      <div class="track">
+        <span>Coupang</span><i>✦</i><span>HP</span><i>✦</i><span>Groww</span><i>✦</i><span>University of Washington</span><i>✦</i><span>IIM Indore</span><i>✦</i><span>IIT (BHU)</span><i>✦</i>
+        <span>Coupang</span><i>✦</i><span>HP</span><i>✦</i><span>Groww</span><i>✦</i><span>University of Washington</span><i>✦</i><span>IIM Indore</span><i>✦</i><span>IIT (BHU)</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <section id="work" class="section">
+      <h2 class="section-title reveal"><span class="num">03</span>Experience</h2>
+      <ol class="timeline">
+        <li class="reveal">
+          <div class="when mono">Jun 2026 — Sep 2026</div>
+          <div class="what">
+            <h3>Coupang <span>· SDE-AI Engineer Intern, Intelligent Cloud</span></h3>
+            <p>Built an LLM inference benchmarking framework and live dashboard for a production API. It guided a model-stack migration that cut latency 15% and cost 4%.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="when mono">Sep 2025 — Apr 2027</div>
+          <div class="what">
+            <h3>University of Washington <span>· MS, Data Science</span></h3>
+            <p>Graduate work in ML, NLP, scalable systems, and explainable AI, with a focus on agents and LLM evaluation.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="when mono">Apr 2023 — Aug 2025</div>
+          <div class="what">
+            <h3>HP Inc. <span>· Data Scientist</span></h3>
+            <p>Built forecasting, churn, and propensity models on billions of telemetry events, plus an LLM-powered natural-language-to-dashboard tool. The propensity work brought in 1M+ customers.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="when mono">Jan 2022 — Mar 2023</div>
+          <div class="what">
+            <h3>Groww <span>· ML Engineer I &amp; ML Intern</span></h3>
+            <p>Built computer-vision KYC automation and clickstream propensity models for a fintech app with millions of users. The work cleared a 3-month backlog and lifted product adoption.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="when mono">Dec 2020 — Mar 2021</div>
+          <div class="what">
+            <h3>IIM Indore <span>· Research Associate</span></h3>
+            <p>Worked with Prof. Saurabh Chandra on a research case for Indore's BRTS. Built a data-visualization decision tool to reduce bus overloading and save fuel.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="when mono">Aug 2018 — May 2022</div>
+          <div class="what">
+            <h3>SGSITS Indore <span>· B.Tech, Electronics &amp; Instrumentation</span></h3>
+            <p>Member of the Robotics Club and Google Developers Club. Led technical workshops and projects across campus for 200+ students, helping them get started in tech and software.</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
       <h2 class="section-title reveal"><span class="num">04</span>Toolkit</h2>
       <div class="skills reveal">
-        <div><h4 class="mono">Languages</h4><p>Python · SQL · PySpark · R · C++</p></div>
+        <div><h4 class="mono">Languages</h4><p>Python · SQL · PySpark · R · C++ · JavaScript · TypeScript · Bash</p></div>
         <div><h4 class="mono">ML</h4><p>PyTorch · TensorFlow · scikit-learn · XGBoost · HuggingFace · Keras</p></div>
-        <div><h4 class="mono">GenAI &amp; LLMs</h4><p>LangChain · RAG · Embeddings · Vector search · Tool calling · Agents</p></div>
-        <div><h4 class="mono">MLOps &amp; Cloud</h4><p>MLflow · Databricks · Docker · CI/CD · AWS · Azure · GCP</p></div>
+        <div><h4 class="mono">GenAI &amp; LLMs</h4><p>RAG · LangChain · LangGraph · Multi-agent orchestration · LoRA · Claude APIs</p></div>
+        <div><h4 class="mono">MLOps &amp; Cloud</h4><p>MLflow · Databricks · Docker · CI/CD · AWS · Azure · GCP · Streamlit</p></div>
       </div>
     </section>
 
@@ -237,7 +264,6 @@
 
   <footer class="footer mono">
     <span>© <span id="year"></span> Jahanvi Jeswani</span>
-    <span>Designed &amp; built in Seattle</span>
   </footer>
 
   <script src="script.js"></script>
