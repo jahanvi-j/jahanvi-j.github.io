@@ -32,7 +32,7 @@
     "studying at UW, Seattle",
     "turning data into decisions"
   ];
-  var hacks = ["UW Datathon", "LA Hacks", "Databricks × UW", "Philips Code to Care"];
+  var hacks = ["LA Hacks", "UW Datathon", "Databricks × UW", "Philips Code to Care"];
   var hackEl = document.getElementById("hackName"), h = 0;
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     setInterval(function () {
