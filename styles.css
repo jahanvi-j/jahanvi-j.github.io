@@ -252,7 +252,7 @@ em.marker {
 .track { display: flex; gap: 28px; width: max-content; padding: 16px 0; font-size: 15px; animation: scroll 30s linear infinite; }
 .track i { color: var(--accent); font-style: normal; }
 @keyframes scroll { to { transform: translateX(-50%); } }
-.marquee.reverse { margin-top: 88px; background: transparent; border: 0; transform: rotate(-1.5deg); }
+.marquee.reverse { margin-top: 88px; background: transparent; border: 0; }
 .marquee.reverse .track { font: 400 34px/1.2 var(--serif); gap: 36px; animation-direction: reverse; animation-duration: 40s; padding: 8px 0; }
 .marquee.reverse .track span { color: var(--muted); transition: color .2s; }
 .marquee.reverse .track i { color: var(--purple); font-size: 22px; align-self: center; }
