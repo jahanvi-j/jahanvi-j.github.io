@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <script>
     (function () {
       var t = localStorage.getItem("theme");
@@ -38,16 +38,17 @@
       <div class="hero-text reveal">
         <h1>Hi, I'm Jahanvi.<br />I build <em class="marker">applied AI</em> that ships.</h1>
         <p class="lede">
-          MS Data Science student at the University of Washington. SDE-AI Engineer Intern at
-          <strong>Coupang</strong>, previously a Data Scientist at <strong>HP</strong> and ML Engineer at
-          <strong>Groww</strong>, building ML systems on billions of events. These days I work on agentic systems, LLM evaluation, and NLP.
+          I'm a master's student in <a href="https://www.washington.edu/datasciencemasters/" target="_blank" rel="noopener">Data Science at the University of Washington</a>, graduating in April 2027. This past summer I worked at <strong>Coupang</strong> as an SDE-AI Engineer Intern, building LLM inference benchmarking. Before my master's, I worked as a Data Scientist at <strong>HP</strong> and an ML Engineer at <strong>Groww</strong>, shipping ML systems on billions of events.
+        </p>
+        <p class="lede">
+          I'm drawn to agentic systems, LLM evaluation, and NLP, especially making AI reliable enough to trust in production.
         </p>
         <p class="typed mono">&gt; currently <span id="typed">building multi-agent systems</span><span class="caret">_</span></p>
         <div class="cta">
-          <a class="btn primary" href="images/Jahanvi_Jeswani_Resume_ML.pdf" target="_blank" rel="noopener">Resume ↗</a>
-          <a class="btn" href="mailto:jjeswani@uw.edu">Email</a>
-          <a class="btn ghost" href="https://github.com/jahanvi-j" target="_blank" rel="noopener">GitHub</a>
           <a class="btn ghost" href="https://linkedin.com/in/jahanvijeswani" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/jahanvi-j" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="mailto:jjeswani@uw.edu">Email</a>
+          <a class="btn primary" href="images/Jahanvi_Jeswani_Resume_ML.pdf" target="_blank" rel="noopener">Resume ↗</a>
         </div>
       </div>
       <div class="hero-photo reveal">
@@ -59,20 +60,15 @@
       </div>
     </section>
 
-    <!-- Wins -->
-    <section class="wins reveal">
-      <div class="wins-count"><b>4×</b><span>hackathon winner</span></div>
-      <ul>
-        <li><span class="mono">01</span>UW Datathon 2026<em>1st Place</em></li>
-        <li><span class="mono">02</span>LA Hacks 2026<em>2nd Place · Cognition Track</em></li>
-        <li><span class="mono">03</span>Databricks × UW Hackathon<em>1st Place</em></li>
-        <li><span class="mono">04</span>Philips Code to Care<em>National Finalist</em></li>
-      </ul>
-    </section>
-
 
     <!-- Projects -->
     <section id="projects" class="section">
+      <div class="ribbon-wrap reveal">
+          <div class="ribbon" aria-label="4× hackathon winner: UW Datathon, LA Hacks, Databricks × UW, Philips Code to Care">
+            <b>4× Hackathon Winner</b>
+            <span class="ribbon-names mono" id="hackName">UW Datathon</span>
+        </div>
+      </div>
       <h2 class="section-title reveal"><span class="num">01</span>Selected projects</h2>
       <div class="grid">
         <article class="card reveal">
@@ -108,7 +104,14 @@
         </article>
 
         <article class="card reveal">
-          <div class="card-top"><span class="idx mono">04</span><span class="badge">Research</span></div>
+          <div class="card-top"><span class="idx mono">04</span><span class="badge gold">1st Place · Databricks × UW</span></div>
+          <h3>FeedForward</h3>
+          <p>Global malnutrition monitoring system that flags emerging high-risk regions and forecasts child and maternal undernutrition across 150+ countries, built end-to-end on Databricks with a Genie-powered dashboard for policymakers.</p>
+          <ul class="tags"><li>Databricks</li><li>MLflow</li><li>Medallion ETL</li><li>Forecasting</li><li>Clustering</li></ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-top"><span class="idx mono">05</span><span class="badge">Research</span></div>
           <h3>ValueActionLens Reproduction</h3>
           <p>Reproduced EMNLP 2025 "Mind the Value-Action Gap" on GPT-4o-mini and Gemma-2-9B: 14.8k scenarios across 12 cultures, then improved alignment with LoRA fine-tuning (SFT + DPO).</p>
           <ul class="tags"><li>LLM Eval</li><li>HuggingFace</li><li>LoRA</li><li>DPO</li></ul>
@@ -118,7 +121,7 @@
         </article>
 
         <article class="card reveal">
-          <div class="card-top"><span class="idx mono">05</span><span class="badge">Agent</span></div>
+          <div class="card-top"><span class="idx mono">06</span><span class="badge">Agent</span></div>
           <h3>Agentic Customer Service</h3>
           <p>GPT-4o agent that plans in code for returns, order validation, and inventory checks, running model-generated code against live inventory and transaction tables.</p>
           <ul class="tags"><li>LangChain</li><li>GPT-4o</li><li>Tool calling</li></ul>
@@ -128,7 +131,7 @@
         </article>
 
         <article class="card reveal">
-          <div class="card-top"><span class="idx mono">06</span><span class="badge">Live</span></div>
+          <div class="card-top"><span class="idx mono">07</span><span class="badge">Live</span></div>
           <h3>Words Across Borders</h3>
           <p>Interactive dashboard that extends Google Ngrams with translations and synonyms to compare how word usage changes over time across languages.</p>
           <ul class="tags"><li>Streamlit</li><li>Data Viz</li><li>APIs</li></ul>
@@ -138,7 +141,7 @@
           </div>
         </article>
         <article class="card reveal">
-          <div class="card-top"><span class="idx mono">07</span><span class="badge">Published · MIE 2023</span></div>
+          <div class="card-top"><span class="idx mono">08</span><span class="badge">Published · MIE 2023</span></div>
           <h3>EEG Biometric Authentication</h3>
           <p>Research under Dr. AR Jac Fredo at IIT (BHU). Authenticated people from EEG signals in the DEAP dataset, reaching 82% accuracy with stimulus-based segmentation, feature engineering, and leave-one-out validation.</p>
           <ul class="tags"><li>Python</li><li>MATLAB</li><li>Signal processing</li><li>ML</li></ul>
@@ -166,7 +169,7 @@
           <p>J. Jeswani, et al. Presented at Medical Informatics Europe (MIE) 2023. <u>View on PubMed ↗</u></p>
         </a>
         <ul class="awards reveal">
-          <li><span class="trophy">★</span>1st Place, Databricks × UW Hackathon</li>
+          <li><span class="trophy">★</span>1st Place, Databricks × UW Hackathon (FeedForward)</li>
           <li><span class="trophy">★</span>1st Place, UW Datathon 2026 (Technology Access Track)</li>
           <li><span class="trophy">★</span>2nd Place, LA Hacks 2026, and winner of the Cognition track</li>
           <li><span class="trophy">★</span>National Finalist, Philips Code to Care Challenge S2 (top 8 in India)</li>
@@ -235,8 +238,8 @@
       <h2 class="section-title reveal"><span class="num">04</span>Toolkit</h2>
       <div class="skills reveal">
         <div><h4 class="mono">Languages</h4><p>Python · SQL · PySpark · R · C++ · JavaScript · TypeScript · Bash</p></div>
-        <div><h4 class="mono">ML</h4><p>PyTorch · TensorFlow · scikit-learn · XGBoost · HuggingFace · Keras</p></div>
-        <div><h4 class="mono">GenAI &amp; LLMs</h4><p>RAG · LangChain · LangGraph · Multi-agent orchestration · LoRA · Claude APIs</p></div>
+        <div><h4 class="mono">ML</h4><p>PyTorch · TensorFlow · scikit-learn · XGBoost · HuggingFace · Keras · pandas · NumPy</p></div>
+        <div><h4 class="mono">Gen AI &amp; LLMs</h4><p>RAG · LangChain · LangGraph · Multi-agent orchestration · MCP · LLM Inference · Evals · LoRA · Claude APIs</p></div>
         <div><h4 class="mono">MLOps &amp; Cloud</h4><p>MLflow · Databricks · Docker · CI/CD · AWS · Azure · GCP · Streamlit</p></div>
       </div>
     </section>
@@ -266,6 +269,6 @@
     <span>© <span id="year"></span> Jahanvi Jeswani</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
